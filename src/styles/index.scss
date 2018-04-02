@@ -1,0 +1,25 @@
+@import "_variables";
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+.banner {width:100%; height:100%; max-width:810px; max-height: 250px;}
+// .qtd-button { padding: 5px 15px; border: 1px solid lightgray; }
+
+.pb5 { padding-bottom: 5px !important; }
+.pb10 { padding-bottom: 10px !important; }
+.pb15 { padding-bottom: 15px; }
+.pb20 { padding-bottom: 20px; }
+.pb25 { padding-bottom: 25px; }
+.pb30 { padding-bottom: 30px; }
+.pb40 { padding-bottom: 40px; }
+.pb50 { padding-bottom: 50px; }
+
+// BOOTSTRAP
+.container {
+    .row {
+        padding-bottom: 50px;
+        .card-header {
+            font-weight: bold; 
+        }
+    }
+}
