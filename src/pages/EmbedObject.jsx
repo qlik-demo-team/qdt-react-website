@@ -40,17 +40,17 @@ const EmbedObject = () => (
     </div>
     <div className="row">
       <div className="col-md-12 text-left">
-        <h5>Render in your Template</h5>
-        <Highlight language="html">
-          {disCode.template}
+        <h5>Define the props in your code</h5>
+        <Highlight language="javascript">
+          {disCode.code}
         </Highlight>
       </div>
     </div>
     <div className="row">
       <div className="col-md-12 text-left">
-        <h5>Define the props in your code</h5>
-        <Highlight language="javascript">
-          {disCode.code}
+        <h5>Render in your Template</h5>
+        <Highlight language="html">
+          {disCode.template}
         </Highlight>
       </div>
     </div>
