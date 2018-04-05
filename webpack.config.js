@@ -49,10 +49,13 @@ module.exports = {
         }, {
           loader: 'sass-loader', // compiles SASS to CSS
         }],
-      },
+      },     
       {
-        test: /\.(eot|jpg|png|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader',
+        test: /\.(eot|png|jpg|svg|ttf|woff|woff2)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+        },
       },
     ],
   },
