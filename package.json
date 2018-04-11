@@ -9,7 +9,7 @@
     "copy-webpack-plugin": "^4.5.1",
     "gulp": "^3.9.1",
     "prop-types": "^15.6.0",
-    "qdt-components": "^1.1.8",
+    "qdt-components": "^1.1.16",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-highlight.js": "^1.0.7",

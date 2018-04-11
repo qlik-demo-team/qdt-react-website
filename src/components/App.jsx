@@ -14,6 +14,7 @@ import PicassoScotterplotImages from '../pages/PicassoScotterplotImages';
 import PicassoLinechart from '../pages/PicassoLinechart';
 import PicassoComboLineBarchart from '../pages/PicassoComboLineBarchart';
 import Search from '../pages/Search';
+import CurrentSelections from '../pages/CurrentSelections';
 
 const App = () => (
   <div>
@@ -34,6 +35,7 @@ const App = () => (
             <Route exact path="/picasso-line-chart" component={PicassoLinechart} />
             <Route exact path="/picasso-combo-line-barchart" component={PicassoComboLineBarchart} />
             <Route exact path="/search" component={Search} />
+            <Route exact path="/current-selections" component={CurrentSelections} />
           </Switch>
         </div>
       </div>

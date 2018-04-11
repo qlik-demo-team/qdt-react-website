@@ -3,6 +3,7 @@ import React from 'react';
 const Home = () => (
   <div>
     <div className="row">
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Embed Objects</div>
@@ -10,6 +11,7 @@ const Home = () => (
           <div className="card-footer text-muted">Embed any object from your Qvf with just the id (Visualization API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Create Session Objects</div>
@@ -17,16 +19,23 @@ const Home = () => (
           <div className="card-footer text-muted">Create a session Object with custom definition (Visualization API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
-          <div className="card-header text-center">Selection Toolbar</div>
-          <div className="card-body"><a href="#/selection-toolbar"><img className="card-img-top" src="assets/selectionToolbar.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">A Custom Selection Toolbar (Selection API)</div>
+          <div className="card-header text-center">Current Selections Toolbar</div>
+          <div className="card-body"><a href="#/current-selections"><img className="card-img-top" src="assets/currentSelections.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">The Native Qlik Sense Selection Toolbar (Capability API)</div>
         </div>
       </div>
-    </div>
 
-    <div className="row">
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Custom Selections Toolbar</div>
+          <div className="card-body"><a href="#/selection-toolbar"><img className="card-img-top" src="assets/selectionToolbar.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">A Custom Selections Toolbar (Selection API)</div>
+        </div>
+      </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Search</div>
@@ -34,9 +43,7 @@ const Home = () => (
           <div className="card-footer text-muted">Search any Field or Dimension from your Qvf</div>
         </div>
       </div>
-    </div>
 
-    <div className="row">
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Horizontal Barchart</div>
@@ -44,6 +51,7 @@ const Home = () => (
           <div className="card-footer text-muted">Custom Horizontal Barchart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Vertical Barchart</div>
@@ -51,6 +59,7 @@ const Home = () => (
           <div className="card-footer text-muted">Custom Vertical Barchart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Pie Chart</div>
@@ -58,9 +67,7 @@ const Home = () => (
           <div className="card-footer text-muted">Custom Pie Chart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
-    </div>
 
-    <div className="row">
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Scotterplot</div>
@@ -68,6 +75,7 @@ const Home = () => (
           <div className="card-footer text-muted">Scotterplot with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Scotterplot - images</div>
@@ -75,6 +83,7 @@ const Home = () => (
           <div className="card-footer text-muted">Scotterplot with custom images,  Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
+
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Line Chart</div>
@@ -82,9 +91,7 @@ const Home = () => (
           <div className="card-footer text-muted">Custom Line Chart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
-    </div>
 
-    <div className="row">
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">Picasso Combo Line Barchart</div>
