@@ -1,6 +1,53 @@
 @import "_variables";
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
+@import "flexboxgrid/dist/flexboxgrid.min.css";
 
+body {
+    font-family: Tahoma, Geneva, sans-serif !important;
+    // font-size: 1rem;
+}
+.layout {
+    display: flex;    
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        .card-body {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.25rem;
+        }
+        .card-img-top {
+            width: 100%;
+            border-top-left-radius: calc(.25rem - 1px);
+            border-top-right-radius: calc(.25rem - 1px);
+        }
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+        .card-header {
+            font-weight: bold; 
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+        .card-footer {
+            padding: .75rem 1.25rem;
+            background-color: rgba(0,0,0,.03);
+            border-top: 1px solid rgba(0,0,0,.125);
+        }
+    }
+}
 
 .banner {width:100%; height:100%; max-width:810px; max-height: 250px;}
 // .qtd-button { padding: 5px 15px; border: 1px solid lightgray; }
@@ -13,14 +60,24 @@
 .pb30 { padding-bottom: 30px; }
 .pb40 { padding-bottom: 40px; }
 .pb50 { padding-bottom: 50px; }
+.text-center { text-align: center; }
 
 // BOOTSTRAP
+h3 {
+    font-size: 1.75rem;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    // font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
 .container {
+    padding-left: 15px;
+    padding-right: 15px;
     .row {
         padding-bottom: 50px;
-        .card-header {
-            font-weight: bold; 
-        }
     }
     .col-md-4 { padding-bottom: 50px; }
 }

@@ -10,7 +10,10 @@ const viz1 = {
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'scotterplot', cols: ['Case Owner', '=Avg([Case Duration Time])', '=Count( {$<Status -={\'Closed\'} >} Distinct %CaseId )'], options: { noTooltip: true }, height: '300px',
+    type: 'scatterplot',
+    cols: ['Case Owner', '=Avg([Case Duration Time])', '=Count( {$<Status -={\'Closed\'} >} Distinct %CaseId )'],
+    options: { noTooltip: true },
+    outerHeight: 300,
   },
 };
 

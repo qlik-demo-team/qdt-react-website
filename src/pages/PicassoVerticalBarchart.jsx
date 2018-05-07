@@ -10,7 +10,10 @@ const viz1 = {
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'verticalBar', cols: ['Case Owner', '=Count(Distinct [%CaseId])'], options: {}, height: 300,
+    type: 'verticalBarchart',
+    // cols: ['Case Owner', '=Count(Distinct [%CaseId])'],
+    cols: ['Priority', '=Count(Distinct [%CaseId])'],
+    outerHeight: 300,
   },
 };
 

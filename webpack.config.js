@@ -31,6 +31,11 @@ module.exports = {
         },
       },
       {
+          test: /\.css$/,
+        //   include: /node_modules/,
+          loader:  'style!css'
+      },
+      {
         test: /\.(scss)$/,
         use: [{
           loader: 'style-loader', // inject CSS to page
@@ -56,6 +61,10 @@ module.exports = {
         options: {
           name: "[name].[ext]",
         },
+      },      
+      {
+          test: /\.json$/,
+          loader: 'json-loader'
       },
     ],
   },

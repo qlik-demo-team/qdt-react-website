@@ -10,7 +10,9 @@ const viz1 = {
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'pie', cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##\')'], height: '300px',
+    type: 'pie',
+    cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##\')'],
+    outerHeight: 300,
   },
 };
 

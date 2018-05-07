@@ -9,9 +9,10 @@ import SelectionToolbar from '../pages/SelectionToolbar';
 import PicassoHorizontalBarchart from '../pages/PicassoHorizontalBarchart';
 import PicassoVerticalBarchart from '../pages/PicassoVerticalBarchart';
 import PicassoPieChart from '../pages/PicassoPieChart';
-import PicassoScotterplot from '../pages/PicassoScotterplot';
-import PicassoScotterplotImages from '../pages/PicassoScotterplotImages';
+import PicassoScatterplot from '../pages/PicassoScatterplot';
+import PicassoScatterplotImages from '../pages/PicassoScatterplotImages';
 import PicassoLinechart from '../pages/PicassoLinechart';
+import PicassoMultiLinechart from '../pages/PicassoMultiLinechart';
 import PicassoComboLineBarchart from '../pages/PicassoComboLineBarchart';
 import Search from '../pages/Search';
 import CurrentSelections from '../pages/CurrentSelections';
@@ -21,7 +22,7 @@ const App = () => (
     <Header />
     <Router>
       <div className="row">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/embed-object" component={EmbedObject} />
@@ -30,9 +31,10 @@ const App = () => (
             <Route exact path="/picasso-horizontal-barchart" component={PicassoHorizontalBarchart} />
             <Route exact path="/picasso-vertical-barchart" component={PicassoVerticalBarchart} />
             <Route exact path="/picasso-pie-chart" component={PicassoPieChart} />
-            <Route exact path="/picasso-scotterplot" component={PicassoScotterplot} />
-            <Route exact path="/picasso-scotterplot-with-images" component={PicassoScotterplotImages} />
+            <Route exact path="/picasso-scatterplot" component={PicassoScatterplot} />
+            <Route exact path="/picasso-scatterplot-with-images" component={PicassoScatterplotImages} />
             <Route exact path="/picasso-line-chart" component={PicassoLinechart} />
+            <Route exact path="/picasso-multi-line-chart" component={PicassoMultiLinechart} />
             <Route exact path="/picasso-combo-line-barchart" component={PicassoComboLineBarchart} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />

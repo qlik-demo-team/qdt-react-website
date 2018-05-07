@@ -20,7 +20,7 @@ const viz2 = {
       "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
     ],
     options: {},
-    height: 300,
+    outerHeight: 300,
   },
 };
 
@@ -38,7 +38,7 @@ const disCode = {
         "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
       ],
       options: {},
-      height: 300,
+      outerHeight: 300,
     },
   };`,
 };

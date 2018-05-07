@@ -70,16 +70,16 @@ const Home = () => (
 
       <div className="col-md-4">
         <div className="card">
-          <div className="card-header text-center">Picasso Scotterplot</div>
-          <div className="card-body"><a href="#/picasso-scotterplot"><img className="card-img-top" src="assets/picassoScotterplot.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-header text-center">Picasso Scatterplot</div>
+          <div className="card-body"><a href="#/picasso-scatterplot"><img className="card-img-top" src="assets/picassoScotterplot.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">Scotterplot with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
 
       <div className="col-md-4">
         <div className="card">
-          <div className="card-header text-center">Picasso Scotterplot - images</div>
-          <div className="card-body"><a href="#/picasso-scotterplot-with-images"><img className="card-img-top" src="assets/picassoScotterplotImages.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-header text-center">Picasso Scatterplot - images</div>
+          <div className="card-body"><a href="#/picasso-scatterplot-with-images"><img className="card-img-top" src="assets/picassoScotterplotImages.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">Scotterplot with custom images,  Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
@@ -89,6 +89,14 @@ const Home = () => (
           <div className="card-header text-center">Picasso Line Chart</div>
           <div className="card-body"><a href="#/picasso-line-chart"><img className="card-img-top" src="assets/picassoLinechart.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">Custom Line Chart with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Multi Line Chart</div>
+          <div className="card-body"><a href="#/picasso-multi-line-chart"><img className="card-img-top" src="assets/picassoMultiLinechart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Custom Multi Line Chart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
 

@@ -17,14 +17,122 @@ const options = {
 };
 
 const qdtComponents = new QdtComponents(options.config, options.connections);
+// const { settings } = QdtComponents.picasso;
 
 export default class QdtComponent extends React.Component {
   static propTypes = {
     type: PropTypes.string.isRequired,
     props: PropTypes.object.isRequired,
+    // customSettings: PropTypes.object,
   }
+  //   static defaultProps = {
+  //     customSettings: null,
+  //   }
   componentDidMount() {
     const { type, props } = this.props;
+    // if (props.type === 'multiLineChart') {
+    //   props.type = null;
+    //   props.settings = settings.lineChart;
+    //   props.settings.components[4].settings.layers.line.stroke = '#4477AA';
+    //   props.settings.components[5].settings.fill = '#4477AA';
+
+    //   const secondChart = [
+    //     props.settings.components[4],
+    //     // point: props.settings.components[5],
+    //   ];
+    //   secondChart[0].key = 'line2';
+    //   secondChart[0].data.extract.props.v.field = 'qMeasureInfo/1';
+    //   secondChart[0].settings.layers.line.stroke = '#CC6677';
+    // const secondLine = props.settings.components[4];
+    // secondLine.key = 'line2';
+    // secondLine.data.extract.props.v.field = 'qMeasureInfo/1';
+    // secondLine.settings.layers.line.stroke = '#CC6677';
+    //   const secondScale = {
+    //     y1: {
+    //       data: { field: 'qMeasureInfo/1' },
+    //       expand: 0.1,
+    //       min: 0,
+    //       invert: true,
+    //     },
+    //   };
+    //   const secondLine = {
+    //     key: 'line2',
+    //     type: 'line',
+    //     data: {
+    //       extract: {
+    //         field: 'qDimensionInfo/0',
+    //         props: {
+    //           v: { field: 'qMeasureInfo/1' },
+    //         },
+    //       },
+    //     },
+    //     settings: {
+    //       coordinates: {
+    //         major: { scale: 'x' },
+    //         minor: { scale: 'y1', ref: 'v' },
+    //       },
+    //       orientation: 'horizontal',
+    //       layers: {
+    //         curve: 'linear',
+    //         show: true,
+    //         line: {
+    //           opacity: 1,
+    //           stroke: '#CC6677',
+    //           strokeWidth: 2,
+    //         },
+    //       },
+    //     },
+    //   };
+    //   const secondPoint = props.settings.components[5];
+    //   secondPoint.key = 'point2';
+    //   secondPoint.data.extract.props.y.field = 'qMeasureInfo/1';
+    //   secondPoint.data.extract.props.y.qMeasure = 'qMeasureInfo/1';
+    //   secondPoint.settings.fill = '#CC6677';
+    //   const secondPoint = {
+    //     key: 'p',
+    //     type: 'point',
+    //     data: {
+    //       extract: {
+    //         field: 'qDimensionInfo/0',
+    //         props: {
+    //           y: { field: 'qMeasureInfo/1' },
+    //           x: { field: 'qDimensionInfo/0' },
+    //           qDimension: { field: 'qDimensionInfo/0' },
+    //           qMeasure: { field: 'qMeasureInfo/1' },
+    //         },
+    //       },
+    //     },
+    //     settings: {
+    //       x: { scale: 'x' },
+    //       y: { scale: 'y' },
+    //       shape: 'circle',
+    //       size: 0.2,
+    //       fill: '#CC6677',
+    //     },
+    //     brush: {
+    //       trigger: [{
+    //         on: 'tap',
+    //         contexts: ['select'],
+    //       }],
+    //       consume: [{
+    //         context: 'select',
+    //         style: {
+    //           active: {
+    //             opacity: 1,
+    //           },
+    //           inactive: {
+    //             opacity: 0.5,
+    //           },
+    //         },
+    //       }],
+    //     },
+    //   };
+    //   props.settings.scales = [...props.settings.scales, secondScale];
+    //   props.settings.components = [...props.settings.components, secondLine];
+    //   console.log(settings);
+    //   console.log(secondScale);
+    //   console.log(props);
+    // }
     qdtComponents.render(type, props, this.node);
   }
 
