@@ -62,8 +62,8 @@ const viz2Options = {
       1,
       0,
     ],
-    qSuppressZero: false,
-    qSuppressMissing: true,
+    qSuppressZero: true,
+    qSuppressMissing: false,
   },
   color: {
     auto: false,

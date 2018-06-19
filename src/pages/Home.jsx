@@ -30,6 +30,14 @@ const Home = () => (
 
       <div className="col-md-4">
         <div className="card">
+          <div className="card-header text-center">Table</div>
+          <div className="card-body"><a href="#/table"><img className="card-img-top" src="assets/table.png" alt="Table" /></a></div>
+          <div className="card-footer text-muted">Create a table via the Visualization API (Capability API)</div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
           <div className="card-header text-center">Custom Selections Toolbar</div>
           <div className="card-body"><a href="#/selection-toolbar"><img className="card-img-top" src="assets/selectionToolbar.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">A Custom Selections Toolbar (Selection API)</div>
@@ -107,7 +115,17 @@ const Home = () => (
           <div className="card-footer text-muted">Scotterplot with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
+
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Stacked Barchart</div>
+          <div className="card-body"><a href="#/stacked-barchart"><img className="card-img-top" src="assets/picassoStackedBarchart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Stacked barchart with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
     </div>
+
 
   </div>
 );

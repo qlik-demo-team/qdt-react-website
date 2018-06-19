@@ -5,9 +5,7 @@ import QdtComponent from '../components/QdtComponent';
 const viz1 = {
   type: 'QdtSelectionToolbar',
   props: {
-    type: 'QdtSelectionToolbar',
-    title: 'MY SELECTIONS',
-    btnText: 'Clear Selections',
+    type: 'QdtSelectionToolbar', height: '300px',
   },
 };
 const viz2 = {
@@ -16,24 +14,33 @@ const viz2 = {
     type: 'QdtViz', id: 'ycppXj', height: '300px',
   },
 };
+const viz3 = {
+  type: 'QdtD3',
+  props: {
+    cols: ['Case Owner'],
+  },
+};
 
 const disCode = {
   template: '<QdtComponent type={viz1.type} props={viz1.props} />',
   code: `const viz1 = {
-    type: 'QdtSelectionToolbar',
+    type: 'QdtSearch',
     props: {
-        type: 'QdtSelectionToolbar', 
-        title: 'MY SELECTIONS',
-        btnText: 'Clear Selections',
+        cols: ['Case Owner'], options: { placeholder: 'Search Case Owner' },
     },
 };`,
 };
 
-const SelectionToolbar = () => (
+const Search = () => (
   <div>
     <div className="row pb50">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
+      </div>
+    </div>
+    <div className="row pb50">
+      <div className="col-md-12">
+        <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>
     <div className="row pb50">
@@ -60,4 +67,4 @@ const SelectionToolbar = () => (
   </div>
 );
 
-export default SelectionToolbar;
+export default Search;

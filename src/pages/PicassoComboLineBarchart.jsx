@@ -19,7 +19,6 @@ const viz2 = {
       "=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId )",
       "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
     ],
-    options: {},
     outerHeight: 300,
   },
 };

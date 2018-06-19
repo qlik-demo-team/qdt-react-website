@@ -5,10 +5,12 @@ import QdtComponents from 'qdt-components';
 const options = {
   config: {
     host: 'sense-demo.qlik.com',
+    // host: 'usrad-jvs02.qliktech.com',
     secure: true,
     port: 443,
     prefix: '',
     appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde',
+    // appId: '5727babd-ea1f-47ff-a89a-f43c0717394a',
   },
   connections: {
     vizApi: true,

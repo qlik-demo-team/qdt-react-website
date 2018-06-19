@@ -16,6 +16,9 @@ import PicassoMultiLinechart from '../pages/PicassoMultiLinechart';
 import PicassoComboLineBarchart from '../pages/PicassoComboLineBarchart';
 import Search from '../pages/Search';
 import CurrentSelections from '../pages/CurrentSelections';
+import PicassoStackedBarchart from '../pages/PicassoStackedBarchart';
+import D3 from '../pages/D3';
+import Table from '../pages/Table';
 
 const App = () => (
   <div>
@@ -38,6 +41,9 @@ const App = () => (
             <Route exact path="/picasso-combo-line-barchart" component={PicassoComboLineBarchart} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
+            <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
+            <Route exact path="/d3e" component={D3} />
+            <Route exact path="/table" component={Table} />
           </Switch>
         </div>
       </div>

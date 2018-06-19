@@ -7,7 +7,7 @@ body {
     // font-size: 1rem;
 }
 .layout {
-    display: flex;    
+    display: flex;
     .card {
         position: relative;
         display: -ms-flexbox;
@@ -69,11 +69,11 @@ h3 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
     // font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.2;
     color: inherit;
 }
-.container {
+.container-fluid {
     padding-left: 15px;
     padding-right: 15px;
     .row {
