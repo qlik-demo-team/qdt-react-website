@@ -14,6 +14,14 @@ const Home = () => (
 
       <div className="col-md-4">
         <div className="card">
+          <div className="card-header text-center">Embed Objects from 2 Apps</div>
+          <div className="card-body"><a href="#/embed-object-multi-app"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Embed any object from 2 Qvfs with just the id (Visualization API)</div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
           <div className="card-header text-center">Create Session Objects</div>
           <div className="card-body"><a href="#/session-object"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">Create a session Object with custom definition (Visualization API)</div>
