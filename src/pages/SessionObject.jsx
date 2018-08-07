@@ -45,9 +45,9 @@ const viz2Options = {
       qSortBy: {
         qSortByState: 0,
         qSortByFrequency: 0,
-        qSortByNumeric: -1,
+        qSortByNumeric: 1,
         qSortByAscii: 0,
-        qSortByLoadOrder: 1,
+        qSortByLoadOrder: 0,
         qSortByExpression: 0,
         qExpression: {
           qv: '',

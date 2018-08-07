@@ -20,6 +20,7 @@ import CurrentSelections from '../pages/CurrentSelections';
 import PicassoStackedBarchart from '../pages/PicassoStackedBarchart';
 import D3 from '../pages/D3';
 import Table from '../pages/Table';
+import TableEngine from '../pages/TableEngine';
 
 const App = () => (
   <div>
@@ -46,6 +47,7 @@ const App = () => (
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
             <Route exact path="/d3e" component={D3} />
             <Route exact path="/table" component={Table} />
+            <Route exact path="/table-engine" component={TableEngine} />
           </Switch>
         </div>
       </div>
