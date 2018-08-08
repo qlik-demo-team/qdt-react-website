@@ -70,6 +70,14 @@ const Home = () => (
 
       <div className="col-md-4">
         <div className="card">
+          <div className="card-header text-center">Filters</div>
+          <div className="card-body"><a href="#/filters"><img className="card-img-top" src="assets/filters.png" alt="Filters" /></a></div>
+          <div className="card-footer text-muted">Create DropDown or Listbox filter from the Engine API</div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
           <div className="card-header text-center">Picasso Horizontal Barchart</div>
           <div className="card-body"><a href="#/picasso-horizontal-barchart"><img className="card-img-top" src="assets/picassoHorizontalBarchart.png" alt="Embedded Native Object" /></a></div>
           <div className="card-footer text-muted">Custom Horizontal Barchart with Picasso.js & Enigma.js (Engine API)</div>

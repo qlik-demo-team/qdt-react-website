@@ -14,7 +14,6 @@ const viz2 = {
     cols: ['Case Owner'],
   },
 };
-
 const viz3 = {
   type: 'QdtFilter',
   props: {
@@ -25,27 +24,32 @@ const viz3 = {
 };
 
 const disCode = {
-  template: '<QdtComponent type={viz2.type} props={viz2.props} />',
-  code: `
-    const viz2 = {
-        type: 'QdtViz',
-        props: {
-          type: 'table',
-          cols: [
-            'Case Owner',
-            'Employee Status',
-            "=dual(floor((vToday - [Employee Hire Date])/365) & 'y ' & floor(((vToday - [Employee Hire Date])/365 - floor((vToday - [Employee Hire Date])/365)) * 12) & 'm', vToday - [Employee Hire Date])",
-            "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
-            "=Count( {$<[Case Is Closed] ={'True'} >} %CaseId )",
-            '=Count(Distinct [%CaseId])',
-          ],
-          options: {
-            showTitles: true,
-            title: 'Resource Details',
-          },
-          height: '300px',
-        },
-    };`,
+  template: `
+<QdtComponent type={viz1.type} props={viz1.props} />
+<QdtComponent type={viz2.type} props={viz2.props} />
+<QdtComponent type={viz3.type} props={viz3.props} />
+    `,
+  code: `    
+const viz1 = {
+    type: 'QdtSelectionToolbar',
+    props: {
+      type: 'QdtSelectionToolbar', height: '300px',
+    },
+  };
+  const viz2 = {
+    type: 'QdtFilter',
+    props: {
+      cols: ['Case Owner'],
+    },
+  };
+  const viz3 = {
+    type: 'QdtFilter',
+    props: {
+      cols: ['Case Owner'],
+      placeholder: 'Expanded',
+      expanded: true,
+    },
+  };`,
 };
 
 const Table = () => (
@@ -77,12 +81,6 @@ const Table = () => (
         <Highlight language="html">
           {disCode.template}
         </Highlight>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12 text-left">
-        <h4>Ref:</h4>
-        <a href="https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/CapabilityAPIs/VisualizationAPI/table-properties.htm">https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/CapabilityAPIs/VisualizationAPI/table-properties.htm</a>
       </div>
     </div>
   </div>
