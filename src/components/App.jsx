@@ -21,6 +21,7 @@ import PicassoStackedBarchart from '../pages/PicassoStackedBarchart';
 import D3 from '../pages/D3';
 import Table from '../pages/Table';
 import TableEngine from '../pages/TableEngine';
+import Filters from '../pages/Filters';
 
 const App = () => (
   <div>
@@ -48,6 +49,7 @@ const App = () => (
             <Route exact path="/d3e" component={D3} />
             <Route exact path="/table" component={Table} />
             <Route exact path="/table-engine" component={TableEngine} />
+            <Route exact path="/filters" component={Filters} />
           </Switch>
         </div>
       </div>
