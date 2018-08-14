@@ -148,6 +148,14 @@ const Home = () => (
         </div>
       </div>
 
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Gauge</div>
+          <div className="card-body"><a href="#/gauge"><img className="card-img-top" src="assets/gauge.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Gauge with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
     </div>
 
 

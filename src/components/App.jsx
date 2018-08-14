@@ -22,6 +22,7 @@ import D3 from '../pages/D3';
 import Table from '../pages/Table';
 import TableEngine from '../pages/TableEngine';
 import Filters from '../pages/Filters';
+import Gauge from '../pages/Gauge';
 
 const App = () => (
   <div>
@@ -50,6 +51,7 @@ const App = () => (
             <Route exact path="/table" component={Table} />
             <Route exact path="/table-engine" component={TableEngine} />
             <Route exact path="/filters" component={Filters} />
+            <Route exact path="/gauge" component={Gauge} />
           </Switch>
         </div>
       </div>

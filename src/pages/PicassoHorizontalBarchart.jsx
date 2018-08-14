@@ -16,6 +16,14 @@ const viz2 = {
     outerHeight: 300,
   },
 };
+const viz3 = {
+  type: 'QdtPicasso',
+  props: {
+    type: 'horizontalBarchart',
+    cols: ['Priority', '=Num(Avg([Case Duration Time]), "##")'],
+    outerHeight: 300,
+  },
+};
 
 const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
@@ -40,6 +48,11 @@ const PicassoHorizontalBarchart = () => (
     <div className="row">
       <div className="col-md-12">
         <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12">
+        <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>
     <div className="row">
