@@ -11,7 +11,9 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'scatterplot',
-    cols: ['Case Owner', '=Avg([Case Duration Time])', '=Count( {$<Status -={\'Closed\'} >} Distinct %CaseId )'],
+    // cols: ['Case Owner', '=Avg([Case Duration Time])',
+    // '=Count( {$<Status -={\'Closed\'} >} Distinct %CaseId )'],
+    cols: ['Case Owner', { qDef: { qDef: '=Avg([Case Duration Time])', qLabel: 'Avg Case Duration Time' } }, '=Count( {$<Status -={\'Closed\'} >} Distinct %CaseId )'],
     options: { noTooltip: true },
     outerHeight: 300,
   },

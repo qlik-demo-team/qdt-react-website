@@ -13,18 +13,28 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'verticalGauge',
-    cols: ['=Avg([Case Duration Time])'],
+    cols: ['=Num(Avg([Case Duration Time]), \'##.#0\')'],
     options: { min: 10, max: 40 },
     outerHeight: 400,
   },
 };
+
+// const viz5 = {
+//   type: 'QdtPicasso',
+//   props: {
+//     type: 'horizontalGauge',
+//     cols: ['=Avg([Case Duration Time])'],
+//     options: { min: 10, max: 40 },
+//     outerHeight: 400,
+//   },
+// };
 
 const viz3 = {
   type: 'QdtPicasso',
   props: {
     type: 'verticalRangeGauge',
     cols: [
-      '=Avg([Case Duration Time])', // Current
+      '=Num(Avg([Case Duration Time]), \'##.#0\')', // Current
       "=Min({<Priority={'High'}>}[Case Duration Time] )", // Range Min
       "=Max({<Priority={'High'}>}[Case Duration Time] )", // Range Max
       '=Min({1}[Case Duration Time])', // Min

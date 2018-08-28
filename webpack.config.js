@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index'],
+//   entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index'],
+  entry: ['react-hot-loader/patch', './src/index'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
@@ -18,7 +19,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: [['latest', {es2015: {modules: process.env.ENV === 'production' ? 'commonjs' : false}}], 'react'],
+          presets: [['env', {es2015: {modules: process.env.ENV === 'production' ? 'commonjs' : false}}], 'react'],
           plugins: ['transform-decorators-legacy', 'transform-object-rest-spread', 'transform-class-properties', 'react-hot-loader/babel'],
         },
       },

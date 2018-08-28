@@ -13,7 +13,7 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'multiLineChart',
-    cols: ['Date.autoCalendar.YearMonth', '=Sum([Number of New Cases])', '=Sum([Number of Closed Cases])'], //
+    cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )', '=Count( {$<Priority={\'Low\'}, Status -={\'Closed\'} >} Distinct %CaseId )'], //
     outerHeight: 300,
   },
 };

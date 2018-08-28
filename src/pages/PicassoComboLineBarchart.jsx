@@ -14,7 +14,7 @@ const viz2 = {
     type: 'comboLineBarchart',
     cols: [
       'Case Owner Group',
-      '=Avg([Case Duration Time])',
+      '=Num(Avg([Case Duration Time]), \'##.0\')',
       "=Count( {$<Priority={'Low'}, Status -={'Closed'} >} Distinct %CaseId )",
       "=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId )",
       "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",

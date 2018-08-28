@@ -5,31 +5,33 @@ import QdtComponent from '../components/QdtComponent';
 const viz1 = {
   type: 'QdtSelectionToolbar',
   props: {
-    type: 'QdtSelectionToolbar', height: '300px',
+    type: 'QdtSelectionToolbar',
   },
 };
+
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'horizontalBarchart',
-    cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##.0\')'],
+    type: 'rangeArea',
+    cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )', '=Count( {$<Priority={\'Low\'}, Status -={\'Closed\'} >} Distinct %CaseId )'], //
     outerHeight: 300,
   },
 };
 
 const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
-  code: `const viz2 = {
+  code: `
+      const viz2 = {
         type: 'QdtPicasso',
         props: {
-            type: 'horizontalBarchart', 
-            cols: ['Case Owner Group', '=Avg([Case Duration Time])'], 
-            outerHeight: 300,
+          type: 'multiLineChart',
+          cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Status -={'Closed'} >} Distinct %CaseId )', '=Count( {$<Status -={'In Process'} >} Distinct %CaseId )'], //
+          outerHeight: 300,
         },
-    };`,
+      };`,
 };
 
-const PicassoHorizontalBarchart = () => (
+const PicassoRangeAreaChart = () => (
   <div>
     <div className="row">
       <div className="col-md-12 text-left">
@@ -60,4 +62,4 @@ const PicassoHorizontalBarchart = () => (
   </div>
 );
 
-export default PicassoHorizontalBarchart;
+export default PicassoRangeAreaChart;

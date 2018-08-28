@@ -11,15 +11,27 @@ const viz1 = {
 const viz2 = {
   type: 'QdtFilter',
   props: {
-    cols: ['Case Owner'],
+    cols: ['Case Owner Group'],
   },
 };
 const viz3 = {
   type: 'QdtFilter',
   props: {
-    cols: ['Case Owner'],
+    cols: ['Case Owner Group'],
     placeholder: 'Expanded',
     expanded: true,
+  },
+};
+
+const viz4 = {
+  type: 'QdtFilter',
+  props: {
+    cols: ['Case Owner Group'],
+    placeholder: 'Expanded',
+    single: true,
+    expandedHorizontal: true,
+    expandedHorizontalSense: false,
+    autoSortByState: 0,
   },
 };
 
@@ -28,6 +40,7 @@ const disCode = {
 <QdtComponent type={viz1.type} props={viz1.props} />
 <QdtComponent type={viz2.type} props={viz2.props} />
 <QdtComponent type={viz3.type} props={viz3.props} />
+<QdtComponent type={viz4.type} props={viz4.props} />
     `,
   code: `    
 const viz1 = {
@@ -49,6 +62,17 @@ const viz1 = {
       placeholder: 'Expanded',
       expanded: true,
     },
+  };
+  const viz4 = {
+    type: 'QdtFilter',
+    props: {
+      cols: ['Case Owner Group'],
+      placeholder: 'Expanded',
+      single: true,
+      expandedHorizontal: true,
+      expandedHorizontalSense: false,
+      autoSortByState: 0,
+    },
   };`,
 };
 
@@ -65,6 +89,9 @@ const Table = () => (
       </div>
       <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3">
         <QdtComponent type={viz3.type} props={viz3.props} />
+      </div>
+      <div className="col-12">
+        <QdtComponent type={viz4.type} props={viz4.props} />
       </div>
     </div>
     <div className="row">

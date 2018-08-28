@@ -13,7 +13,8 @@ const viz2 = {
   props: {
     type: 'pie',
     cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##\')'],
-    outerHeight: 300,
+    // prio: 'svg',
+    outerHeight: 600,
   },
 };
 

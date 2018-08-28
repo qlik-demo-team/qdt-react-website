@@ -16,7 +16,6 @@ const viz2 = {
     outerHeight: 300,
   },
 };
-
 const PicassoVerticalBarchart = () => (
   <div>
     <div className="row">

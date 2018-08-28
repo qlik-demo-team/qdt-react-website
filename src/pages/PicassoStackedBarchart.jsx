@@ -11,6 +11,7 @@ const viz2 = {
   props: {
     type: 'stackedBarchart',
     cols: ['Case Owner Group', 'Priority', '=Count(Distinct [%CaseId])'],
+    prio: 'svg',
     outerHeight: 500,
   },
 };

@@ -156,6 +156,14 @@ const Home = () => (
         </div>
       </div>
 
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Range Area Chart</div>
+          <div className="card-body"><a href="#/picasso-range-area-chart"><img className="card-img-top" src="assets/picassoRangeAreaChart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Range Area chart with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
     </div>
 
 
