@@ -141,10 +141,12 @@ const PicassoVerticalBarchart = () => (
     </div>
     <div className="row">
       <div className="col-md-12">
-        <p>In the first example "custom1", I used an already predefined setting, verticalComboChart and appended 2 lines and 3 points.
+        <p>In the first example &quot;custom1&quot;, I used an already predefined setting,
+        verticalComboChart and appended 2 lines and 3 points.
         </p>
-        <p>In the second example, I created the entire settings file.</p>
-        <p />
+        <p>In the second example &quot;custom2&quot;, I created the entire settings file.</p>
+        <p><a href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx</a></p>
+        <p><a href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx</a></p>
       </div>
     </div>
     <div className="row">
