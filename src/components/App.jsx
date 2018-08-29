@@ -19,6 +19,7 @@ import Search from '../pages/Search';
 import CurrentSelections from '../pages/CurrentSelections';
 import PicassoStackedBarchart from '../pages/PicassoStackedBarchart';
 import PicassoRangeAreaChart from '../pages/PicassoRangeAreaChart';
+import PicassoCustomChart from '../pages/PicassoCustomChart';
 import D3 from '../pages/D3';
 import Table from '../pages/Table';
 import TableEngine from '../pages/TableEngine';
@@ -46,6 +47,7 @@ const App = () => (
             <Route exact path="/picasso-multi-line-chart" component={PicassoMultiLinechart} />
             <Route exact path="/picasso-combo-line-barchart" component={PicassoComboLineBarchart} />
             <Route exact path="/picasso-range-area-chart" component={PicassoRangeAreaChart} />
+            <Route exact path="/picasso-custom-chart" component={PicassoCustomChart} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
@@ -54,6 +56,7 @@ const App = () => (
             <Route exact path="/table-engine" component={TableEngine} />
             <Route exact path="/filters" component={Filters} />
             <Route exact path="/gauge" component={Gauge} />
+
           </Switch>
         </div>
       </div>
