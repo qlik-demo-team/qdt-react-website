@@ -19,7 +19,11 @@ import Search from '../pages/Search';
 import CurrentSelections from '../pages/CurrentSelections';
 import PicassoStackedBarchart from '../pages/PicassoStackedBarchart';
 import PicassoRangeAreaChart from '../pages/PicassoRangeAreaChart';
-import PicassoCustomChart from '../pages/PicassoCustomChart';
+import PicassoCustomComboChart from '../pages/PicassoCustomComboChart';
+import PicassoCustomGroupBarChart from '../pages/PicassoCustomGroupBarChart';
+import PicassoCustomChart2 from '../pages/PicassoCustomChart2';
+import PicassoVerticalGroupBarchart from '../pages/PicassoVerticalGroupBarchart';
+import PicassoCustomVerticalGroupBarchart from '../pages/PicassoCustomVerticalGroupBarchart';
 import D3 from '../pages/D3';
 import Table from '../pages/Table';
 import TableEngine from '../pages/TableEngine';
@@ -47,7 +51,11 @@ const App = () => (
             <Route exact path="/picasso-multi-line-chart" component={PicassoMultiLinechart} />
             <Route exact path="/picasso-combo-line-barchart" component={PicassoComboLineBarchart} />
             <Route exact path="/picasso-range-area-chart" component={PicassoRangeAreaChart} />
-            <Route exact path="/picasso-custom-chart" component={PicassoCustomChart} />
+            <Route exact path="/picasso-custom-combo-chart" component={PicassoCustomComboChart} />
+            <Route exact path="/picasso-custom-group-barchart" component={PicassoCustomGroupBarChart} />
+            <Route exact path="/picasso-custom-chart2" component={PicassoCustomChart2} />
+            <Route exact path="/picasso-vertical-group-barchart" component={PicassoVerticalGroupBarchart} />
+            <Route exact path="/picasso-custom-vertical-group-barchart" component={PicassoCustomVerticalGroupBarchart} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
@@ -56,6 +64,7 @@ const App = () => (
             <Route exact path="/table-engine" component={TableEngine} />
             <Route exact path="/filters" component={Filters} />
             <Route exact path="/gauge" component={Gauge} />
+            <Route component={Home} />
 
           </Switch>
         </div>

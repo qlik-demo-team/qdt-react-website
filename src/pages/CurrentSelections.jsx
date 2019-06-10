@@ -15,6 +15,26 @@ const viz2 = {
   },
 };
 
+const viz3 = {
+  type: 'QdtViz',
+  props: {
+    type: 'QdtViz', id: 'jTuCwkB', height: '300px',
+  },
+};
+
+const viz4 = {
+  type: 'QdtViz',
+  props: {
+    type: 'QdtViz', id: 'JARjh', height: '300px',
+  },
+};
+
+const viz5 = {
+  type: 'QdtViz',
+  props: {
+    type: 'QdtViz', id: 'JsVPe', height: '300px',
+  },
+};
 
 const disCode = {
   template: '<QdtComponent type={viz1.type} props={viz1.props} />',
@@ -34,6 +54,17 @@ const SelectionToolbar = () => (
     <div className="row pb50">
       <div className="col-md-12">
         <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+    </div>
+    <div className="row pb50">
+      <div className="col-md-4">
+        <QdtComponent type={viz3.type} props={viz3.props} />
+      </div>
+      <div className="col-md-4">
+        <QdtComponent type={viz4.type} props={viz4.props} />
+      </div>
+      <div className="col-md-4">
+        <QdtComponent type={viz5.type} props={viz5.props} />
       </div>
     </div>
     <div className="row">

@@ -5,33 +5,41 @@ import QdtComponent from '../components/QdtComponent';
 const viz1 = {
   type: 'QdtSelectionToolbar',
   props: {
-    type: 'QdtSelectionToolbar',
+    type: 'QdtSelectionToolbar', height: '300px',
   },
 };
 
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'rangeArea',
-    cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )', '=Count( {$<Priority={\'Low\'}, Status -={\'Closed\'} >} Distinct %CaseId )'], //
+    type: 'verticalGroupBarchart',
+    cols: [
+      'Case Owner Group',
+      "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
+      "=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId)",
+    ],
     outerHeight: 300,
   },
 };
 
 const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
-  code: `
-      const viz2 = {
-        type: 'QdtPicasso',
+  code: `const viz2 = {
+        type: 'verticalGroupBarchart',
         props: {
-          type: 'multiLineChart',
-          cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Status -={'Closed'} >} Distinct %CaseId )', '=Count( {$<Status -={'In Process'} >} Distinct %CaseId )'], //
-          outerHeight: 300,
+            type: 'stackedBarchart',
+            cols: [
+              'Case Owner Group',
+              "=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
+              "=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId)",
+            ],
+            outerHeight: 300,
         },
-      };`,
+    };`,
 };
 
-const PicassoRangeAreaChart = () => (
+
+const PicassoVerticalBarchart = () => (
   <div>
     <div className="row">
       <div className="col-md-12 text-left">
@@ -62,4 +70,4 @@ const PicassoRangeAreaChart = () => (
   </div>
 );
 
-export default PicassoRangeAreaChart;
+export default PicassoVerticalBarchart;

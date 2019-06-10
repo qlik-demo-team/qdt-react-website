@@ -94,3 +94,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 //     color: darkgray !important;
 // }
 // .pic-tooltip-arrow { }
+
+// Fix for the spinning ball with bootstrap
+.qtd-preloader .qtd-preloader-ball2 { top: -40px; }

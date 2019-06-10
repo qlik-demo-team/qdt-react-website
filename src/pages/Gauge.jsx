@@ -19,16 +19,6 @@ const viz2 = {
   },
 };
 
-// const viz5 = {
-//   type: 'QdtPicasso',
-//   props: {
-//     type: 'horizontalGauge',
-//     cols: ['=Avg([Case Duration Time])'],
-//     options: { min: 10, max: 40 },
-//     outerHeight: 400,
-//   },
-// };
-
 const viz3 = {
   type: 'QdtPicasso',
   props: {
@@ -48,7 +38,9 @@ const viz4 = {
   type: 'QdtFilter',
   props: {
     cols: ['Case Owner Group'],
-    placeholder: 'Select Case Owner Group for testing',
+    placeholder: 'Select Case Owner Group',
+    single: true,
+    showStateInDropdown: true,
   },
 };
 
@@ -122,12 +114,20 @@ const PicassoLinechart = () => (
       </div>
     </div>
     <div className="row">
-      <div className="col-md-3">
-        <h5>Vertical Bar Gauge</h5>
+      <div className="col-md-3 text-center">
+        <h5>
+Vertical
+          <br />
+Bar Gauge
+        </h5>
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
-      <div className="col-md-3">
-        <h5>Vertical Bar Gauge with Range limits</h5>
+      <div className="col-md-3 text-center">
+        <h5>
+Vertical Bar Gauge
+          <br />
+with Range limits
+        </h5>
         <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>

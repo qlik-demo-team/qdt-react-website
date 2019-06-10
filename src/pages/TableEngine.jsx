@@ -14,6 +14,8 @@ const viz2 = {
     cols: [
       'Case Owner',
       'Employee Status',
+      "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
+      // "=Count( {$<[Case Is Closed] ={'True'} >} %CaseId )",
     ],
     // options: {
     //   columnWidths: ['50', '50'],

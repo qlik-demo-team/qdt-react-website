@@ -1,4 +1,5 @@
 import React from 'react';
+import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
 const viz1 = {
@@ -11,11 +12,23 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'verticalBarchart',
-    // cols: ['Case Owner', '=Count(Distinct [%CaseId])'],
     cols: ['Priority', '=Count(Distinct [%CaseId])'],
     outerHeight: 300,
   },
 };
+
+const disCode = {
+  template: '<QdtComponent type={viz2.type} props={viz2.props} />',
+  code: `const viz2 = {
+        type: 'verticalBarchart',
+        props: {
+            type: 'stackedBarchart',
+            cols: ['Priority', 'Priority', '=Count(Distinct [%CaseId])'],
+            outerHeight: 300,
+        },
+    };`,
+};
+
 const PicassoVerticalBarchart = () => (
   <div>
     <div className="row">
@@ -26,6 +39,22 @@ const PicassoVerticalBarchart = () => (
     <div className="row">
       <div className="col-md-12">
         <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12 text-left">
+        <h5>Define the props in your code</h5>
+        <Highlight language="javascript">
+          {disCode.code}
+        </Highlight>
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12 text-left">
+        <h5>Render in your Template</h5>
+        <Highlight language="html">
+          {disCode.template}
+        </Highlight>
       </div>
     </div>
   </div>

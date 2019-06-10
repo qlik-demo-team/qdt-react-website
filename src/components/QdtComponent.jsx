@@ -1,7 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import QdtComponents from 'qdt-components';
+import Cookies from 'universal-cookie';
+import Globals from './Globals';
 
+// const enigma = require('enigma.js');
+// const schema = require('enigma.js/schemas/12.20.0.json');
+
+const cookies = new Cookies();
+// document.cookie = "X-Qlik-xrfkey=123456789ABCDEFG";
+// document.cookie = "hdr-usr=AUTOTICKET@yianni";
+cookies.set('X-Qlik-xrfkey', '123456789ABCDEFG');
+cookies.set('hdr-usr', 'AUTOTICKET@yianni');
+// cookies.set('myCat', 'Pacman', { path: '/' });
+// const WebSocketClient = require('websocket').w3cwebsocket;
+
+// const ws = new WebSocketClient();
+// ws.on('connect', (connection) => {
+//   console.log('WebSocket Client Connected');
+//   connection.on('error', (error) => {
+//     console.log(`Connection Error: ${error.toString()}`);
+//   });
+//   connection.on('close', () => {
+//     console.log('echo-protocol Connection Closed');
+//   });
+//   connection.on('message', (message) => {
+//     if (message.type === 'utf8') {
+//       console.log(`Received: ${message.utf8Data}`);
+//     }
+//   });
+// });
+// const url = 'wss://sense-demo-staging.qlik.com/hdr/app/133dab5d-8f56-4d40-b3e0-a6b401391bde/?xrfkey=123456789ABCDEFG';
+// document.cookie = "X-Qlik-xrfkey=123456789ABCDEFG";
+// document.cookie = "hdr-usr=AUTOTICKET@yianni";
 const options = {
   config: {
     host: 'sense-demo.qlik.com',
@@ -30,7 +61,8 @@ const options2 = {
 };
 
 
-const qdtComponents = new QdtComponents(options.config, options.connections);
+const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
+Globals.picasso = QdtComponents.picasso;
 
 export default class QdtComponent extends React.Component {
   static propTypes = {
@@ -87,6 +119,62 @@ export default class QdtComponent extends React.Component {
             interactions.pan(),
           ],
         };
+      } else if (props.type === 'custom3') {
+        props.type = null;
+        props.settings = {
+          scales: {
+            x: {
+              data: { fields: ['qMeasureInfo/0', 'qMeasureInfo/1'] },
+              expand: 0,
+            },
+            y: { data: { extract: { field: 'qDimensionInfo/0' } } },
+          },
+          components: [
+            components.axis(),
+            components.axis({ scale: 'y' }),
+            components.box({
+              orientation: 'horizontal',
+              start: { field: 'qMeasureInfo/0' },
+              end: { field: 'qMeasureInfo/1' },
+            }),
+            components.range({ scale: 'y' }),
+            components.labels({ direction: 'right' }),
+          ],
+          interactions: [],
+        };
+      } else if (props.type === 'custom4') {
+        props.type = null;
+        props.settings = settings.verticalBarchart;
+        props.settings.scales.y = { data: { fields: ['qMeasureInfo/0', 'qMeasureInfo/1', 'qMeasureInfo/2'] }, invert: true, expand: 0.04 };
+        props.settings.components.push(components.box({
+          key: 'bar2', displayOrder: 3, fill: '#960000', start: 0, end: { field: 'qMeasureInfo/1' },
+        }));
+      } else if (props.type === 'customVerticalGroupBarchart') {
+        props.type = null;
+        props.settings = settings.verticalGroupBarchart;
+        props.settings.scales.y.data.fields = ['qMeasureInfo/0', 'qMeasureInfo/1', 'qMeasureInfo/2', 'qMeasureInfo/3'];
+        props.settings.components = [
+          components.axis(),
+          components.axis({ scale: 'y' }),
+          components.box({
+            displayOrder: 0, measures: 3, end: { field: 1 }, fill: '#275378', stroke: '#3399CC',
+          }),
+          components.box({
+            displayOrder: 1, measures: 3, end: { field: 2 }, fill: '#B35A01', stroke: '#CC6666',
+          }),
+          components.box({
+            displayOrder: 2, measures: 3, end: { field: 3 }, fill: '#669933', stroke: '#99CC66',
+          }),
+          components.line({
+            key: 'line', displayOrder: 3, y: { field: 'qMeasureInfo/3' }, stroke: '#B974FD',
+          }),
+          components.point({
+            key: 'point', displayOrder: 4, y: { field: 'qMeasureInfo/3' }, fill: '#B974FD', stroke: '#B974FD', size: 0.2,
+          }),
+          components.range(),
+          components.labels({ displayOrder: 3, direction: 'up' }),
+          components.tooltip,
+        ];
       }
     }
 

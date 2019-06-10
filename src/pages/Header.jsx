@@ -10,8 +10,9 @@ const Header = () => (
 This is a React (
           {dependencies.react}
 ) template that uses
+          { ' '}
           <a href="https://github.com/qlik-demo-team/qdt-components">
-qdt-components (
+ qdt-components (
             {dependencies['qdt-components']}
 )
           </a>
