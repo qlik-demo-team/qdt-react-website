@@ -30,7 +30,7 @@
     "babel-loader": "8.0.6",
     "babel-plugin-transform-class-properties": "6.24.1",
     "cross-env": "5.2.0",
-    "css-loader": "1.0.1",
+    "css-loader": "2.1.1",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-loader": "2.1.2",
