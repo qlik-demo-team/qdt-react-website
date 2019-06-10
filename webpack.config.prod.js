@@ -1,24 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AsyncChunkNames = require('webpack-async-chunk-names-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: [
     'babel-polyfill',
-    'react-hot-loader/patch',
     './src/index',
   ],
   output: {
-    path: path.resolve(__dirname, 'src'),
-    publicPath: '/',
-    chunkFilename: 'js/[name].[hash].bundle.js',
-    filename: 'js/[name].[hash].bundle.js',
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
-    publicPath: '/',
+    // path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../qdt-apps/qdt-components/react'),
+    publicPath: '',
+    chunkFilename: 'js/[name].bundle.js',
+    filename: 'js/[name].bundle.js',
   },
   devtool: 'source-map',
   module: {
@@ -28,15 +25,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: [['@babel/preset-env', {
-            targets: {
-              edge: '17',
-              firefox: '60',
-              chrome: '67',
-              safari: '11.1',
-            },
-            useBuiltIns: 'usage',
-          }], '@babel/preset-react'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: [['@babel/plugin-proposal-decorators', { legacy: true }], '@babel/plugin-transform-spread', '@babel/plugin-syntax-dynamic-import', 'transform-class-properties', 'react-hot-loader/babel'],
         },
       },
@@ -68,14 +57,13 @@ module.exports = {
           loader: 'sass-loader', // compiles SASS to CSS
         }],
       },
-      // {
-      //   test: /\.(eot|png|jpg|svg|ttf|woff|woff2)$/,
-      //   include : path.join(__dirname, 'assets'),
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: '[name].[ext]',
-      //   },
-      // },
+      {
+        test: /\.(eot|png|jpg|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -83,11 +71,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/index.html'),
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
+    new AsyncChunkNames(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -108,9 +92,11 @@ module.exports = {
       // name: true,
       name(module) {
         // generate a chunk name...
-        // ...
+         //...
       },
       cacheGroups: {
+        default: false,
+        vendors: false,
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
@@ -122,6 +108,14 @@ module.exports = {
           priority: -20,
           reuseExistingChunk: true,
         },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'all',
+          priority: 10,
+          reuseExistingChunk: true,
+          enforce: true,
+        },
       },
     },
     minimizer: [
@@ -129,7 +123,7 @@ module.exports = {
         cache: true,
         parallel: true,
         uglifyOptions: {
-          compress: true,
+          compress: false,
           ecma: 5,
           mangle: true,
         },

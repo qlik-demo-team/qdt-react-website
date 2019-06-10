@@ -166,9 +166,29 @@ const Home = () => (
 
       <div className="col-md-4">
         <div className="card">
-          <div className="card-header text-center">Picasso Custom Chart</div>
-          <div className="card-body"><a href="#/picasso-custom-chart"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom on-the-fly chart with Picasso.js & Enigma.js (Engine API)<br />Start with a basic like Barchart and add as many components as you want.</div>
+          <div className="card-header text-center">Picasso Custom Combo Chart</div>
+          <div className="card-body"><a href="#/picasso-custom-combo-chart"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">
+Custom on-the-fly chart with Picasso.js & Enigma.js (Engine API)
+            <br />
+Start with a basic like Barchart and add as many components as you want.
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Vertical Group Barhart</div>
+          <div className="card-body"><a href="#/picasso-vertical-group-barchart"><img className="card-img-top" src="assets/picassoGroupBarchart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Vertical Group Barchart with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Custom Group Barhart</div>
+          <div className="card-body"><a href="#/picasso-custom-vertical-group-barchart"><img className="card-img-top" src="assets/picassoCustomGroupBarchart.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Custom Vertical Group Barchart with Picasso.js & Enigma.js (Engine API)</div>
         </div>
       </div>
 

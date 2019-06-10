@@ -5,13 +5,18 @@ import QdtComponent from '../components/QdtComponent';
 const viz1 = {
   type: 'QdtSelectionToolbar',
   props: {
-    type: 'QdtSelectionToolbar', height: '300px',
+    type: 'QdtSelectionToolbar',
+    height: '300px',
   },
 };
 const viz2 = {
   type: 'QdtFilter',
   props: {
     cols: ['Case Owner Group'],
+    placeholder: 'Case Owner',
+    single: true,
+    autoSortByState: 0,
+    showStateInDropdown: true,
   },
 };
 const viz3 = {
@@ -22,7 +27,6 @@ const viz3 = {
     expanded: true,
   },
 };
-
 const viz4 = {
   type: 'QdtFilter',
   props: {
@@ -43,22 +47,28 @@ const disCode = {
 <QdtComponent type={viz4.type} props={viz4.props} />
     `,
   code: `    
-const viz1 = {
+
+  const viz1 = {
     type: 'QdtSelectionToolbar',
     props: {
-      type: 'QdtSelectionToolbar', height: '300px',
+      type: 'QdtSelectionToolbar', 
+      height: '300px',
     },
   };
   const viz2 = {
     type: 'QdtFilter',
     props: {
-      cols: ['Case Owner'],
+      cols: ['Case Owner Group'], 
+      placeholder: 'Case Owner', 
+      single: true,
+      autoSortByState: 0, 
+      showStateInDropdown: true,
     },
   };
   const viz3 = {
     type: 'QdtFilter',
     props: {
-      cols: ['Case Owner'],
+      cols: ['Case Owner Group'],
       placeholder: 'Expanded',
       expanded: true,
     },

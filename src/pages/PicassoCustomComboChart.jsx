@@ -141,7 +141,8 @@ const PicassoVerticalBarchart = () => (
     </div>
     <div className="row">
       <div className="col-md-12">
-        <p>In the first example &quot;custom1&quot;, I used an already predefined setting,
+        <p>
+In the first example &quot;custom1&quot;, I used an already predefined setting,
         verticalComboChart and appended 2 lines and 3 points.
         </p>
         <p>In the second example &quot;custom2&quot;, I created the entire settings file.</p>

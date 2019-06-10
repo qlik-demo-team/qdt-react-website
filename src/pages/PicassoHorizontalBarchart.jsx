@@ -1,6 +1,7 @@
 import React from 'react';
 import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
+import Globals from '../components/Globals';
 
 const viz1 = {
   type: 'QdtSelectionToolbar',
@@ -8,12 +9,24 @@ const viz1 = {
     type: 'QdtSelectionToolbar', height: '300px',
   },
 };
+const mySettings = Globals.picasso.settings.horizontalBarchart;
+mySettings.components[1].settings.labels.align = 'left';
+// mySettings.components[1].settings.labels.invert = false;
+// mySettings.components[1].settings.labels.justify = 0;
+// console.log(mySettings.components[1]);
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'horizontalBarchart',
+    // type: 'horizontalBarchart',
     cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##.0\')'],
+    // options: { bar: { height: 50, fill: '#554741' } },
     outerHeight: 300,
+    // qSortByAscii: 0,
+    // qSortByLoadOrder: 1,
+    qInterColumnSortOrder: [1, 0],
+    qSuppressZero: true,
+    prio: 'svg',
+    settings: mySettings,
   },
 };
 
