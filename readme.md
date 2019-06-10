@@ -10,3 +10,6 @@
 ## Usage
 - Run `npm run dev` for a dev server.
 - This will open the page at http://localhost:8080/
+
+## Live Demo
+- https://qdt-apps.qlik.com/qdt-components/react/

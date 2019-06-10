@@ -11,7 +11,6 @@ module.exports = {
     './src/index',
   ],
   output: {
-    // path: path.resolve(__dirname, 'dist'),
     path: path.resolve(__dirname, '../qdt-apps/qdt-components/react'),
     publicPath: '',
     chunkFilename: 'js/[name].bundle.js',
