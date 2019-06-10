@@ -168,7 +168,11 @@ const Home = () => (
         <div className="card">
           <div className="card-header text-center">Picasso Custom Chart</div>
           <div className="card-body"><a href="#/picasso-custom-chart"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom on-the-fly chart with Picasso.js & Enigma.js (Engine API)<br />Start with a basic like Barchart and add as many components as you want.</div>
+          <div className="card-footer text-muted">
+Custom on-the-fly chart with Picasso.js & Enigma.js (Engine API)
+            <br />
+Start with a basic like Barchart and add as many components as you want.
+          </div>
         </div>
       </div>
 

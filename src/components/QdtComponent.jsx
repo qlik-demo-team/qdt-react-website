@@ -38,6 +38,7 @@ export default class QdtComponent extends React.Component {
     props: PropTypes.object.isRequired,
     app2: PropTypes.bool,
   }
+
     static defaultProps = {
       app2: false,
     }
