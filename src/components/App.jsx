@@ -29,6 +29,7 @@ import Table from '../pages/Table';
 import TableEngine from '../pages/TableEngine';
 import Filters from '../pages/Filters';
 import Gauge from '../pages/Gauge';
+import PicassoGantt from '../pages/PicassoGantt';
 
 const App = () => (
   <div>
@@ -56,6 +57,7 @@ const App = () => (
             <Route exact path="/picasso-custom-chart2" component={PicassoCustomChart2} />
             <Route exact path="/picasso-vertical-group-barchart" component={PicassoVerticalGroupBarchart} />
             <Route exact path="/picasso-custom-vertical-group-barchart" component={PicassoCustomVerticalGroupBarchart} />
+            <Route exact path="/picasso-gantt" component={PicassoGantt} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />

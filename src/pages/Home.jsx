@@ -192,6 +192,14 @@ Start with a basic like Barchart and add as many components as you want.
         </div>
       </div>
 
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">Picasso Gannt</div>
+          <div className="card-body"><a href="#/picasso-gantt"><img className="card-img-top" src="assets/picassoGantt.png" alt="Embedded Native Object" /></a></div>
+          <div className="card-footer text-muted">Gantt Chart with Picasso.js & Enigma.js (Engine API)</div>
+        </div>
+      </div>
+
     </div>
   </div>
 );
