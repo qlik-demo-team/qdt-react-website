@@ -16,7 +16,7 @@
     "react-highlight.js": "1.0.7",
     "react-hot-loader": "4.11.1",
     "react-router-dom": "5.0.1",
-    "universal-cookie": "4.0.0"
+    "universal-cookie": "4.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
