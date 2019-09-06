@@ -10,7 +10,7 @@
     "gulp": "4.0.2",
     "json-loader": "0.5.7",
     "prop-types": "15.7.2",
-    "qdt-components": "1.3.25",
+    "qdt-components": "^1.3.28",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-highlight.js": "1.0.7",

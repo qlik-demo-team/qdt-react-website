@@ -12,21 +12,33 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'verticalBarchart',
-    cols: ['Priority', '=Count(Distinct [%CaseId])'],
-    outerHeight: 300,
+    cols: ['Date', '=Sum([Number of New Cases])'],
+    // cols: ['Contributor Name', '=Sum([Total Amount])'], // NP for testing
+    outerHeight: 500,
+    qInterColumnSortOrder: [1, 0],
+    qPage: {
+      qTop: 0,
+      qLeft: 0,
+      qWidth: 2,
+      qHeight: 30,
+    },
   },
 };
 
 const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
   code: `const viz2 = {
-        type: 'verticalBarchart',
-        props: {
-            type: 'stackedBarchart',
-            cols: ['Priority', 'Priority', '=Count(Distinct [%CaseId])'],
-            outerHeight: 300,
-        },
-    };`,
+    type: 'verticalBarchart',
+    cols: ['Date', '=Sum([Number of New Cases])'],
+    outerHeight: 500,
+    qInterColumnSortOrder: [1, 0],
+    qPage: {
+      qTop: 0,
+      qLeft: 0,
+      qWidth: 2,
+      qHeight: 30,
+    },
+  };`,
 };
 
 const PicassoVerticalBarchart = () => (

@@ -13,7 +13,7 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'rangeArea',
-    cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )', '=Count( {$<Priority={\'Low\'}, Status -={\'Closed\'} >} Distinct %CaseId )'], //
+    cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )', '=Count( {$<Priority={\'Low\'}, Status -={\'Closed\'} >} Distinct %CaseId )'],
     outerHeight: 300,
   },
 };
@@ -24,8 +24,8 @@ const disCode = {
       const viz2 = {
         type: 'QdtPicasso',
         props: {
-          type: 'multiLineChart',
-          cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Status -={'Closed'} >} Distinct %CaseId )', '=Count( {$<Status -={'In Process'} >} Distinct %CaseId )'], //
+          type: 'rangeArea',
+          cols: ['Date.autoCalendar.YearMonth', '=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )', '=Count( {$<Priority={'Low'}, Status -={'Closed'} >} Distinct %CaseId )'],
           outerHeight: 300,
         },
       };`,

@@ -30,10 +30,10 @@ const EmbedObject = () => (
         <h3>Helpdesk</h3>
       </div>
       <div className="col-md-6">
-        <QdtComponent type="QdtViz" props={{ id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398', height: '300px' }} />
+        <QdtComponent type="QdtViz" props={{ id: 'jTuCwkB', height: '300px' }} />
       </div>
       <div className="col-md-6">
-        <QdtComponent type="QdtViz" props={{ id: 'hRZaKk', height: '300px' }} />
+        <QdtComponent type="QdtViz" props={{ id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398', height: '300px' }} />
       </div>
     </div>
     <div className="row pb50">

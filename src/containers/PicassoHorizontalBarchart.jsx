@@ -11,22 +11,23 @@ const viz1 = {
 };
 const mySettings = Globals.picasso.settings.horizontalBarchart;
 mySettings.components[1].settings.labels.align = 'left';
-// mySettings.components[1].settings.labels.invert = false;
-// mySettings.components[1].settings.labels.justify = 0;
-// console.log(mySettings.components[1]);
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    // type: 'horizontalBarchart',
-    cols: ['Case Owner Group', '=Num(Avg([Case Duration Time]), \'##.0\')'],
-    // options: { bar: { height: 50, fill: '#554741' } },
-    outerHeight: 300,
-    // qSortByAscii: 0,
-    // qSortByLoadOrder: 1,
+    type: 'horizontalBarchart',
+    cols: ['Date', '=Sum([Number of New Cases])'],
+    // cols: ['Contributor Name', '=Sum([Total Amount])'], // NP for testing
+    outerHeight: 500,
     qInterColumnSortOrder: [1, 0],
     qSuppressZero: true,
-    prio: 'svg',
+    qPage: {
+      qTop: 0,
+      qLeft: 0,
+      qWidth: 2,
+      qHeight: 10,
+    },
     settings: mySettings,
+    minimap: false,
   },
 };
 
