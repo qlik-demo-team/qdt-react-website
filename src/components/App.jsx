@@ -27,6 +27,7 @@ import PicassoCustomVerticalGroupBarchart from '../containers/PicassoCustomVerti
 import D3 from '../containers/D3';
 import Table from '../containers/Table';
 import TableEngine from '../containers/TableEngine';
+import PivotTableEngine from '../containers/PivotTableEngine';
 import Filters from '../containers/Filters';
 import Gauge from '../containers/Gauge';
 import PicassoGantt from '../containers/PicassoGantt';
@@ -64,6 +65,7 @@ const App = () => (
             <Route exact path="/d3e" component={D3} />
             <Route exact path="/table" component={Table} />
             <Route exact path="/table-engine" component={TableEngine} />
+            <Route exact path="/pivot-table-engine" component={PivotTableEngine} />
             <Route exact path="/filters" component={Filters} />
             <Route exact path="/gauge" component={Gauge} />
             <Route component={Home} />

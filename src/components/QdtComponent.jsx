@@ -141,12 +141,12 @@ function QdtComponent(props) {
     if (app2) {
       Promise.all([qdtComponents.qAppPromise]).then(() => {
         const qdtComponents2 = new QdtComponents(options2.config, options2.connections);
-        qdtComponents2.render(type, qProps, this.node);
+        qdtComponents2.render(type, qProps, node.current);
       });
     } else {
       qdtComponents.render(type, qProps, node.current);
     }
-  }, []);
+  }, [type, qProps, app2]);
 
   return (
     <div ref={node} />
