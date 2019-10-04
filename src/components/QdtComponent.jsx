@@ -1,39 +1,43 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import QdtComponents from 'qdt-components';
+// import QdtComponents from 'qdt-components';
+import { qdtComponents, qdtComponents2, picasso } from './QdtApp';
 import Globals from './Globals';
 
-const options = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    // appId: '45841fc2-ae9c-490c-9bc4-55592fc62afb', // NP DONATIONS with millions of rows for testing
-    appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
-  },
-  connections: {
-    vizApi: true,
-    engineApi: true,
-  },
-};
-const options2 = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    appId: '372cbc85-f7fb-4db6-a620-9a5367845dce', // Consumer Sales
-  },
-  connections: {
-    vizApi: true,
-    engineApi: false,
-  },
-};
+// const options = {
+//   config: {
+//     host: 'sense-demo.qlik.com',
+//     secure: true,
+//     port: 443,
+//     prefix: '',
+//     // appId: '45841fc2-ae9c-490c-9bc4-55592fc62afb', // NP DONATIONS with millions of rows for testing
+//     appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
+//   },
+//   connections: {
+//     vizApi: true,
+//     engineApi: true,
+//     useUniqueSessionID: 'yianni',
+//   },
+// };
+// const options2 = {
+//   config: {
+//     host: 'sense-demo.qlik.com',
+//     secure: true,
+//     port: 443,
+//     prefix: '',
+//     appId: '372cbc85-f7fb-4db6-a620-9a5367845dce', // Consumer Sales
+//   },
+//   connections: {
+//     vizApi: true,
+//     engineApi: false,
+//     useUniqueSessionID: 'yianni',
+//   },
+// };
 
-const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
-const { picasso: { settings, components, interactions } } = QdtComponents;
-Globals.picasso = QdtComponents.picasso;
+// const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
+// const { picasso: { settings, components, interactions } } = QdtComponents;
+const { settings, components, interactions } = picasso;
+Globals.picasso = picasso;
 
 function QdtComponent(props) {
   const node = useRef(null);
@@ -140,7 +144,6 @@ function QdtComponent(props) {
     }
     if (app2) {
       Promise.all([qdtComponents.qAppPromise]).then(() => {
-        const qdtComponents2 = new QdtComponents(options2.config, options2.connections);
         qdtComponents2.render(type, qProps, node.current);
       });
     } else {

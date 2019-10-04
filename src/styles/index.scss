@@ -97,3 +97,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 // Fix for the spinning ball with bootstrap
 .qtd-preloader .qtd-preloader-ball2 { top: -40px; }
+
+.pivot-table {
+    .row { 
+        padding: 5px 0 !important;
+    }
+    .header {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.02);
+        border-bottom: 1px solid #ccc;
+    }
+}
+

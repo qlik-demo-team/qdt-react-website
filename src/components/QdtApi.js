@@ -1,20 +1,4 @@
-import QdtComponents from 'qdt-components';
-
-const options = {
-  config: {
-    host: 'sense-demo-staging.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '/',
-    appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
-  },
-  connections: {
-    vizApi: false,
-    engineApi: true,
-  },
-};
-
-const qdtComponents = new QdtComponents(options.config, options.connections);
+import { qdtComponents } from './QdtApp';
 
 // https://help.qlik.com/en-US/sense-developer/June2019/APIs/EngineAPI/definitions-TreeDataDef.html
 // https://help.qlik.com/en-US/sense-developer/June2019/APIs/EngineAPI/definitions-NxTreeDimensionDef.html
@@ -85,26 +69,28 @@ const getTreeData = async () => {
     const qDoc = await qdtComponents.qDocPromise;
     const qObject = await qDoc.createSessionObject(qProp);
     const qData = await qObject.getHyperCubeTreeData('/qTreeDataDef');
-    // await qObject.selectHyperCubeValues('/qHyperCubeDef', dimIndex, selections, toggle);
-    setTimeout(async () => {
-      await qObject.selectHyperCubeValues('/qTreeDataDef', 1, [0], true);
-      const qData2 = await qObject.getHyperCubeTreeData('/qTreeDataDef');
-      console.log(qData2[0]);
-    }, 3000);
-    // await qObject.selectHyperCubeCells('/qTreeDataDef', [0], [0], true);
-    // await qObject.multiRangeSelectTreeDataValues('/qTreeDataDef', [{ qRange: [0, 1], qDimensionIx: 0 }]);
-    // await qObject.multiRangeSelectTreeDataValues('/qTreeDataDef', [{
-    //   qRange: {
-    //     qMin: 0, qMax: 1, qMinInclEq: true, qMaxInclEq: true,
-    //   },
-    //   qDimensionIx: 0,
-    // }]);
+    // setTimeout(async () => {
+    //   await qObject.selectHyperCubeValues('/qTreeDataDef', 1, [0], true);
+    //   const qData2 = await qObject.getHyperCubeTreeData('/qTreeDataDef');
+    //   console.log(qData2[0]);
+    // }, 3000);
+
     console.warn('Tree Data');
     console.log(qData[0]);
+    return qData[0];
   } catch (error) {
     console.log(error);
   }
   return false;
+};
+
+const getSelections = async () => {
+  const qDoc = await qdtComponents.qDocPromise;
+  const qPropSelections = { qInfo: { qType: 'SelectionObject' }, qSelectionObjectDef: {} };
+  const qObjectSelections = await qDoc.createSessionObject(qPropSelections);
+  const qObjectSelectionsLayout = await qObjectSelections.getLayout();
+  console.log(qObjectSelectionsLayout);
+  return qObjectSelections;
 };
 
 const getHCPivot = async () => {
@@ -181,4 +167,6 @@ const getHC = async () => {
   return qData;
 };
 
-export { getTreeData, getHCPivot, getHC };
+export {
+  getTreeData, getHCPivot, getHC, getSelections,
+};
