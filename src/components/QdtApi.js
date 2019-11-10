@@ -28,7 +28,7 @@ const getTreeData = async () => {
             // ],
             qValueExprs: [
               { qDef: { qDef: '=Count([Case Count])' } },
-              { qDef: { qDef: '=If(Count({$<[Case Is Closed]={\'True\'} >}  %CaseId)>0, Avg ([Case Duration Time]),0)+ If(Count({$<[Case Is Closed]={\'False\'} >}  %CaseId)>0, Avg([Case Aging]), 0)' } },
+              // { qDef: { qDef: '=If(Count({$<[Case Is Closed]={\'True\'} >}  %CaseId)>0, Avg ([Case Duration Time]),0)+ If(Count({$<[Case Is Closed]={\'False\'} >}  %CaseId)>0, Avg([Case Aging]), 0)' } },
             ],
             // qNullSuppression: true,
             qShowAll: false,
@@ -39,7 +39,7 @@ const getTreeData = async () => {
             qSortCriterias: [{ qSortByAscii: -1 }],
             qValueExprs: [
               { qDef: { qDef: '=Count([Case Count])' } },
-              { qDef: { qDef: '=If(Count({$<[Case Is Closed]={\'True\'} >}  %CaseId)>0, Avg ([Case Duration Time]),0)+ If(Count({$<[Case Is Closed]={\'False\'} >}  %CaseId)>0, Avg([Case Aging]), 0)' } },
+              // { qDef: { qDef: '=If(Count({$<[Case Is Closed]={\'True\'} >}  %CaseId)>0, Avg ([Case Duration Time]),0)+ If(Count({$<[Case Is Closed]={\'False\'} >}  %CaseId)>0, Avg([Case Aging]), 0)' } },
             ],
             qNullSuppression: true,
             qShowAll: false,

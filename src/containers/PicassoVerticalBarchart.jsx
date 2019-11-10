@@ -8,6 +8,7 @@ const viz1 = {
     type: 'QdtSelectionToolbar', height: '300px',
   },
 };
+
 const viz2 = {
   type: 'QdtPicasso',
   props: {
@@ -43,7 +44,7 @@ const disCode = {
 
 const PicassoVerticalBarchart = () => (
   <div>
-    <div className="row">
+    <div className="row pb50">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>

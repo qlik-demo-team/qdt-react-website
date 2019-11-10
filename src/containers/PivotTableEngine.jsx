@@ -99,10 +99,10 @@ function Container() {
         </div>
       </div> */}
       <div className="row pb50">
-        <div className="col-md-2 text-left">
+        <div className="col-md-3 text-left">
           <QdtComponent type={vizFilter1.type} props={vizFilter1.props} />
         </div>
-        <div className="col-md-2 text-left">
+        <div className="col-md-3 text-left">
           <QdtComponent type={vizFilter2.type} props={vizFilter2.props} />
         </div>
       </div>

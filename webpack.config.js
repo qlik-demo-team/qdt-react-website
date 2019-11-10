@@ -63,6 +63,10 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+        'react': path.join(__dirname, './node_modules/react'),
+        'react-dom': path.join(__dirname, '/node_modules/react-dom'),
+    }
     // plugins: []
   },
 }

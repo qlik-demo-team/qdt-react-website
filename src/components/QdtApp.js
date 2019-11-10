@@ -1,5 +1,20 @@
 import QdtComponents from 'qdt-components';
 
+// const array = new Uint32Array(1);
+// window.crypto.getRandomValues(array);
+// console.log(array);
+
+// const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// const alphabetArray = alphabet.split('');
+// window.crypto.getRandomValues(alphabetArray);
+const alphabetArray = Math.random().toString(32).substr(2, 8);
+console.log(alphabetArray);
+// const ID_LENGTH = (length) || 8;
+// let rtn = '';
+// for (let i = 0; i < ID_LENGTH; i += 1) {
+//   rtn += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
+// }
+
 const options = {
   config: {
     host: 'sense-demo.qlik.com',
@@ -12,7 +27,7 @@ const options = {
   connections: {
     vizApi: true,
     engineApi: true,
-    useUniqueSessionID: 'yianni',
+    useUniqueSessionID: Math.random().toString(32).substr(2, 8),
   },
 };
 const options2 = {

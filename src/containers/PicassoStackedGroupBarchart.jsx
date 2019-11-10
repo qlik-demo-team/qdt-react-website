@@ -1,45 +1,23 @@
 import React from 'react';
 import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
-import Globals from '../components/Globals';
 
 const viz1 = {
   type: 'QdtSelectionToolbar',
-  props: {
-    type: 'QdtSelectionToolbar', height: '300px',
-  },
+  props: { type: 'QdtSelectionToolbar' },
 };
-
-const viz4 = {
-  type: 'QdtFilter',
-  props: {
-    cols: ['Date'],
-    placeholder: 'Date',
-    autoSortByState: 0,
-    showStateInDropdown: true,
-  },
-};
-
-
-const mySettings = Globals.picasso.settings.horizontalBarchart;
-mySettings.components[1].settings.labels.align = 'left';
 const viz2 = {
   type: 'QdtPicasso',
   props: {
-    type: 'horizontalBarchart',
-    cols: ['Date', '=Sum([Number of New Cases])'],
-    // cols: ['Contributor Name', '=Sum([Total Amount])'], // NP for testing
+    type: 'stackedGroupBarchart',
+    cols: [
+      'Date.autoCalendar.Year',
+      'Case Owner Group',
+      '=Avg([Case Duration Time])',
+      '=Sum([Case Owner])',
+    ],
+    prio: 'svg',
     outerHeight: 500,
-    qInterColumnSortOrder: [1, 0],
-    qSuppressZero: true,
-    qPage: {
-      qTop: 0,
-      qLeft: 0,
-      qWidth: 2,
-      qHeight: 10,
-    },
-    settings: mySettings,
-    minimap: false,
   },
 };
 
@@ -48,9 +26,9 @@ const disCode = {
   code: `const viz2 = {
         type: 'QdtPicasso',
         props: {
-            type: 'horizontalBarchart', 
-            cols: ['Case Owner Group', '=Avg([Case Duration Time])'], 
-            outerHeight: 300,
+            type: 'stackedBarchart',
+            cols: ['Case Owner Group', 'Priority', '=Count(Distinct [%CaseId])'],
+            outerHeight: 300,a
         },
     };`,
 };
@@ -60,11 +38,6 @@ const PicassoHorizontalBarchart = () => (
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
-      </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-md-12 text-left">
-        <QdtComponent type={viz4.type} props={viz4.props} />
       </div>
     </div>
     <div className="row">

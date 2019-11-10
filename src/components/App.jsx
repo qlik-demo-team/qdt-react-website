@@ -24,6 +24,7 @@ import PicassoCustomGroupBarChart from '../containers/PicassoCustomGroupBarChart
 import PicassoCustomChart2 from '../containers/PicassoCustomChart2';
 import PicassoVerticalGroupBarchart from '../containers/PicassoVerticalGroupBarchart';
 import PicassoCustomVerticalGroupBarchart from '../containers/PicassoCustomVerticalGroupBarchart';
+import PicassoStackedGroupBarchart from '../containers/PicassoStackedGroupBarchart';
 import D3 from '../containers/D3';
 import Table from '../containers/Table';
 import TableEngine from '../containers/TableEngine';
@@ -31,6 +32,8 @@ import PivotTableEngine from '../containers/PivotTableEngine';
 import Filters from '../containers/Filters';
 import Gauge from '../containers/Gauge';
 import PicassoGantt from '../containers/PicassoGantt';
+import Kpi from '../containers/Kpi';
+// import Test from '../containers/Test';
 
 const App = () => (
   <div>
@@ -58,6 +61,7 @@ const App = () => (
             <Route exact path="/picasso-custom-chart2" component={PicassoCustomChart2} />
             <Route exact path="/picasso-vertical-group-barchart" component={PicassoVerticalGroupBarchart} />
             <Route exact path="/picasso-custom-vertical-group-barchart" component={PicassoCustomVerticalGroupBarchart} />
+            <Route exact path="/picasso-stacked-group-barchart" component={PicassoStackedGroupBarchart} />
             <Route exact path="/picasso-gantt" component={PicassoGantt} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
@@ -68,6 +72,8 @@ const App = () => (
             <Route exact path="/pivot-table-engine" component={PivotTableEngine} />
             <Route exact path="/filters" component={Filters} />
             <Route exact path="/gauge" component={Gauge} />
+            <Route exact path="/kpi" component={Kpi} />
+            {/* <Route exact path="/test" component={Test} /> */}
             <Route component={Home} />
 
           </Switch>
