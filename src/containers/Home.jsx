@@ -79,7 +79,7 @@ const Home = () => (
       <div className="col-md-4">
         <div className="card">
           <div className="card-header text-center">KPIs</div>
-          <div className="card-body"><a href="#/kpi"><img className="card-img-top" src="assets/filters.png" alt="Kpis" /></a></div>
+          <div className="card-body"><a href="#/kpi"><img className="card-img-top" src="assets/kpis.png" alt="Kpis" /></a></div>
           <div className="card-footer text-muted">Create KPIs from the Engine API</div>
         </div>
       </div>
