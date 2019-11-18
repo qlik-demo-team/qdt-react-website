@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 // import QdtComponents from 'qdt-components';
-import { qdtComponents, qdtComponents2, picasso } from './QdtApp';
+import {
+  qdtComponents, qdtComponents2, qdtComponents3, picasso,
+} from './QdtApp';
 import Globals from './Globals';
 
 // const options = {
@@ -41,7 +43,9 @@ Globals.picasso = picasso;
 
 function QdtComponent(props) {
   const node = useRef(null);
-  const { type, props: qProps, app2 } = props;
+  const {
+    type, props: qProps, app2, app3,
+  } = props;
 
   useEffect(() => {
     if (qProps.type === 'custom1') {
@@ -146,10 +150,12 @@ function QdtComponent(props) {
       Promise.all([qdtComponents.qAppPromise]).then(() => {
         qdtComponents2.render(type, qProps, node.current);
       });
+    } else if (app3) {
+      qdtComponents3.render(type, qProps, node.current);
     } else {
       qdtComponents.render(type, qProps, node.current);
     }
-  }, [type, qProps, app2]);
+  }, [type, qProps, app2, app3]);
 
   return (
     <div ref={node} />
@@ -160,9 +166,11 @@ QdtComponent.propTypes = {
   type: PropTypes.string.isRequired,
   props: PropTypes.object.isRequired,
   app2: PropTypes.bool,
+  app3: PropTypes.bool,
 };
 QdtComponent.defaultProps = {
   app2: false,
+  app3: false,
 };
 
 export default QdtComponent;

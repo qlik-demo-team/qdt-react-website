@@ -1,19 +1,6 @@
 import QdtComponents from 'qdt-components';
 
-// const array = new Uint32Array(1);
-// window.crypto.getRandomValues(array);
-// console.log(array);
-
-// const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// const alphabetArray = alphabet.split('');
-// window.crypto.getRandomValues(alphabetArray);
-const alphabetArray = Math.random().toString(32).substr(2, 8);
-console.log(alphabetArray);
-// const ID_LENGTH = (length) || 8;
-// let rtn = '';
-// for (let i = 0; i < ID_LENGTH; i += 1) {
-//   rtn += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
-// }
+const useUniqueSessionID = Math.random().toString(32).substr(2, 8);
 
 const options = {
   config: {
@@ -27,9 +14,10 @@ const options = {
   connections: {
     vizApi: true,
     engineApi: true,
-    useUniqueSessionID: Math.random().toString(32).substr(2, 8),
+    useUniqueSessionID,
   },
 };
+
 const options2 = {
   config: {
     host: 'sense-demo.qlik.com',
@@ -41,14 +29,30 @@ const options2 = {
   connections: {
     vizApi: true,
     engineApi: false,
-    useUniqueSessionID: 'yianni',
+    useUniqueSessionID,
+  },
+};
+
+const options3 = {
+  config: {
+    host: 'sense-demo.qlik.com',
+    secure: true,
+    port: 443,
+    prefix: '',
+    appId: '4052680c-fd97-4f49-ac83-e026cdd26d65', // Swipe Night
+  },
+  connections: {
+    vizApi: false,
+    engineApi: true,
+    useUniqueSessionID,
   },
 };
 
 const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
 const qdtComponents2 = new QdtComponents(options2.config, options2.connections);
+const qdtComponents3 = new QdtComponents(options3.config, options3.connections);
 const { picasso } = QdtComponents;
 
 export {
-  qdtComponents, qdtComponents2, picasso,
+  qdtComponents, qdtComponents2, qdtComponents3, picasso,
 };

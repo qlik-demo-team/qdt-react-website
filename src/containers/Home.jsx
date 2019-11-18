@@ -84,6 +84,14 @@ const Home = () => (
         </div>
       </div>
 
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-header text-center">MAPBOX</div>
+          <div className="card-body"><a href="#/mapbox"><img className="card-img-top" src="assets/mapbox.png" alt="mapbox" /></a></div>
+          <div className="card-footer text-muted">Create a Map using Mapbox and Engine API</div>
+        </div>
+      </div>
+
       <div className="col-md-12">
         <h3>PICASSO</h3>
       </div>

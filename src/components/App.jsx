@@ -33,6 +33,8 @@ import Filters from '../containers/Filters';
 import Gauge from '../containers/Gauge';
 import PicassoGantt from '../containers/PicassoGantt';
 import Kpi from '../containers/Kpi';
+import MapBox from '../containers/MapBox';
+import PicassoMekko from '../containers/PicassoMekko';
 // import Test from '../containers/Test';
 
 const App = () => (
@@ -63,16 +65,18 @@ const App = () => (
             <Route exact path="/picasso-custom-vertical-group-barchart" component={PicassoCustomVerticalGroupBarchart} />
             <Route exact path="/picasso-stacked-group-barchart" component={PicassoStackedGroupBarchart} />
             <Route exact path="/picasso-gantt" component={PicassoGantt} />
+            <Route exact path="/picasso-mekko" component={PicassoMekko} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
-            <Route exact path="/d3e" component={D3} />
+            <Route exact path="/d3" component={D3} />
             <Route exact path="/table" component={Table} />
             <Route exact path="/table-engine" component={TableEngine} />
             <Route exact path="/pivot-table-engine" component={PivotTableEngine} />
             <Route exact path="/filters" component={Filters} />
             <Route exact path="/gauge" component={Gauge} />
             <Route exact path="/kpi" component={Kpi} />
+            <Route exact path="/mapbox" component={MapBox} />
             {/* <Route exact path="/test" component={Test} /> */}
             <Route component={Home} />
 

@@ -15,7 +15,6 @@ const viz2 = {
       'Case Owner',
       'Employee Status',
       "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
-      // "=Count( {$<[Case Is Closed] ={'True'} >} %CaseId )",
     ],
     // options: {
     //   columnWidths: ['50', '50'],
@@ -29,22 +28,15 @@ const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
   code: `
     const viz2 = {
-        type: 'QdtViz',
+        type: 'QdtTable',
         props: {
-          type: 'table',
           cols: [
             'Case Owner',
             'Employee Status',
-            "=dual(floor((vToday - [Employee Hire Date])/365) & 'y ' & floor(((vToday - [Employee Hire Date])/365 - floor((vToday - [Employee Hire Date])/365)) * 12) & 'm', vToday - [Employee Hire Date])",
             "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
-            "=Count( {$<[Case Is Closed] ={'True'} >} %CaseId )",
-            '=Count(Distinct [%CaseId])',
           ],
-          options: {
-            showTitles: true,
-            title: 'Resource Details',
-          },
-          height: '300px',
+          height: 400,
+          rowHeight: 40,
         },
     };`,
 };
