@@ -12,9 +12,9 @@ const viz2 = {
   type: 'QdtTable',
   props: {
     cols: [
-      'Case Owner',
-      'Employee Status',
-      "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
+      'Case Owner Group',
+      '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )',
+      '=Count( {$<Priority={\'Medium\'}, Status -={\'Closed\'} >} Distinct %CaseId )',
     ],
     // options: {
     //   columnWidths: ['50', '50'],
