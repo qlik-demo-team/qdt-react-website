@@ -24,8 +24,8 @@ const disCode = {
 };
 
 const EmbedObject = () => (
-  <div>
-    <div className="row pb50">
+  <div className="singlepage">
+    <div className="row">
       <div className="col-md-12">
         <h3>Helpdesk</h3>
       </div>

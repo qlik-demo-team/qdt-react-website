@@ -32,7 +32,7 @@ const disCode = {
 };
 
 const PicassoRangeAreaChart = () => (
-  <div>
+  <div className="singlepage">
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />

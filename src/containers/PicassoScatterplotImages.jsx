@@ -36,8 +36,8 @@ const disCode = {
 };
 
 const ScotterplotImages = () => (
-  <div>
-    <div className="row pb50">
+  <div className="singlepage">
+    <div className="row">
       <div className="col-md-12">
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>

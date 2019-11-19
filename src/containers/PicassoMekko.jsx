@@ -7,8 +7,8 @@ const disCode = {
 };
 
 const MapBox = () => (
-  <div>
-    <div className="row pb50">
+  <div className="singlepage">
+    <div className="row">
       <div className="col-md-12">
         <QdtComponent
           type="QdtPicasso"

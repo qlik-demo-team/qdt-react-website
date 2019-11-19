@@ -2,10 +2,10 @@ import React from 'react';
 import { dependencies } from '../../package.json';
 
 const Header = () => (
-  <div>
+  <div className="singlepage">
     <div className="row">
       <div className="col-md-12 text-center">
-        <a href="#/"><img src="https://cdn.rawgit.com/qlik-demo-team/qdt-react-template/223fe135/src/assets/banner_react.jpg" className="banner img-fluid" alt="banner" /></a>
+        <a href="#/"><img src="/assets/react_Qdt.png" className="banner" alt="Qdt and React" /></a>
         <h3>
             This is a React (
           {dependencies.react}

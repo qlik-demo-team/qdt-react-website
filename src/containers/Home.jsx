@@ -2,226 +2,279 @@ import React from 'react';
 
 const Home = () => (
   <div>
-    <div className="row">
+    <div className="layout">
 
-      <div className="col-md-4">
+      <a href="#/embed-object">
         <div className="card">
-          <div className="card-header text-center">Embed Objects</div>
-          <div className="card-body"><a href="#/embed-object"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Embed any object from your Qvf with just the id (Visualization API)</div>
+          <div className="card-header ">Embed Objects</div>
+          <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">
+            Embed any object from your Qvf with just the id
+          </div>
+          <div className="badges">
+            <span className="badge badge-dark">Capability API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/embed-object-multi-app">
         <div className="card">
-          <div className="card-header text-center">Embed Objects from 2 Apps</div>
-          <div className="card-body"><a href="#/embed-object-multi-app"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Embed any object from 2 Qvfs with just the id (Visualization API)</div>
+          <div className="card-header ">Embed Objects from 2 Apps</div>
+          <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Embed any object from 2 Qvfs with just the id</div>
+          <div className="badges">
+            <span className="badge badge-dark">Capability API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/session-object">
         <div className="card">
-          <div className="card-header text-center">Create Session Objects</div>
-          <div className="card-body"><a href="#/session-object"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Create a session Object with custom definition (Visualization API)</div>
+          <div className="card-header ">Create Session Objects</div>
+          <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Create a session Object with custom definition </div>
+          <div className="badges">
+            <span className="badge badge-dark">Capability API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/current-selections">
         <div className="card">
-          <div className="card-header text-center">Current Selections Toolbar</div>
-          <div className="card-body"><a href="#/current-selections"><img className="card-img-top" src="assets/currentSelections.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">The Native Qlik Sense Selection Toolbar (Capability API)</div>
+          <div className="card-header ">Current Selections Toolbar</div>
+          <div className="card-body"><img className="card-img-top" src="assets/currentSelections.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">The Native Qlik Sense Selection Toolbar </div>
+          <div className="badges">
+            <span className="badge badge-dark">Capability API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/table">
         <div className="card">
-          <div className="card-header text-center">Table (Visualization Api)</div>
-          <div className="card-body"><a href="#/table"><img className="card-img-top" src="assets/table.png" alt="Table" /></a></div>
-          <div className="card-footer text-muted">Create a table via the Visualization API (Capability API)</div>
+          <div className="card-header ">Table</div>
+          <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
+          <div className="card-footer ">Create a table via the Capability API </div>
+          <div className="badges">
+            <span className="badge badge-dark">Capability API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/table-engine">
         <div className="card">
-          <div className="card-header text-center">Table (Engine API)</div>
-          <div className="card-body"><a href="#/table-engine"><img className="card-img-top" src="assets/table.png" alt="Table" /></a></div>
-          <div className="card-footer text-muted">Create a table via the Engine API</div>
+          <div className="card-header ">Table</div>
+          <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
+          <div className="card-footer ">Create a table via the  Engine API</div>
+          <div className="badges">
+            <span className="badge badge-dark"> Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/selection-toolbar">
         <div className="card">
-          <div className="card-header text-center">Custom Selections Toolbar</div>
-          <div className="card-body"><a href="#/selection-toolbar"><img className="card-img-top" src="assets/selectionToolbar.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">A Custom Selections Toolbar (Selection API)</div>
+          <div className="card-header ">Custom Selections Toolbar</div>
+          <div className="card-body"><img className="card-img-top" src="assets/selectionToolbar.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">A Custom Selections Toolbar</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/search">
         <div className="card">
-          <div className="card-header text-center">Search</div>
-          <div className="card-body"><a href="#/search"><img className="card-img-top" src="assets/search.png" alt="Search Fields" /></a></div>
-          <div className="card-footer text-muted">Search any Field or Dimension from your Qvf</div>
+          <div className="card-header ">Search</div>
+          <div className="card-body"><img className="card-img-top" src="assets/search.png" alt="Search Fields" /></div>
+          <div className="card-footer ">Search any Field or Dimension from your Qvf</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/filters">
         <div className="card">
-          <div className="card-header text-center">Filters</div>
-          <div className="card-body"><a href="#/filters"><img className="card-img-top" src="assets/filters.png" alt="Filters" /></a></div>
-          <div className="card-footer text-muted">Create DropDown or Listbox filter from the Engine API</div>
+          <div className="card-header ">Filters</div>
+          <div className="card-body"><img className="card-img-top" src="assets/filters.png" alt="Filters" /></div>
+          <div className="card-footer ">Create DropDown or Listbox filter from the Engine API</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/kpi">
         <div className="card">
-          <div className="card-header text-center">KPIs</div>
-          <div className="card-body"><a href="#/kpi"><img className="card-img-top" src="assets/kpis.png" alt="Kpis" /></a></div>
-          <div className="card-footer text-muted">Create KPIs from the Engine API</div>
+          <div className="card-header ">KPIs</div>
+          <div className="card-body"><img className="card-img-top" src="assets/kpis.png" alt="Kpis" /></div>
+          <div className="card-footer ">Create KPIs from the Engine API</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/mapbox">
         <div className="card">
-          <div className="card-header text-center">MAPBOX</div>
-          <div className="card-body"><a href="#/mapbox"><img className="card-img-top" src="assets/mapbox.png" alt="mapbox" /></a></div>
-          <div className="card-footer text-muted">Create a Map using Mapbox and Engine API</div>
+          <div className="card-header ">MAPBOX</div>
+          <div className="card-body"><img className="card-img-top" src="assets/mapbox.png" alt="mapbox" /></div>
+          <div className="card-footer ">Create a Map using Mapbox and Engine API</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
+      </a>
 
-      <div className="col-md-12">
-        <h3>PICASSO</h3>
-      </div>
-
-      <div className="col-md-4">
+      <a href="#/picasso-horizontal-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Horizontal Barchart</div>
-          <div className="card-body"><a href="#/picasso-horizontal-barchart"><img className="card-img-top" src="assets/picassoHorizontalBarchart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Horizontal Barchart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Horizontal Barchart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoHorizontalBarchart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Horizontal Barchart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-vertical-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Vertical Barchart</div>
-          <div className="card-body"><a href="#/picasso-vertical-barchart"><img className="card-img-top" src="assets/picassoVerticalBarchart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Vertical Barchart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Vertical Barchart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoVerticalBarchart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Vertical Barchart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-pie-chart">
         <div className="card">
-          <div className="card-header text-center">Picasso Pie Chart</div>
-          <div className="card-body"><a href="#/picasso-pie-chart"><img className="card-img-top" src="assets/picassoPie.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Pie Chart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Pie Chart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoPie.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Pie Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-scatterplot">
         <div className="card">
-          <div className="card-header text-center">Picasso Scatterplot</div>
-          <div className="card-body"><a href="#/picasso-scatterplot"><img className="card-img-top" src="assets/picassoScotterplot.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Scotterplot with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Scatterplot</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoScotterplot.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Scotterplot with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-scatterplot-with-images">
         <div className="card">
-          <div className="card-header text-center">Picasso Scatterplot - images</div>
-          <div className="card-body"><a href="#/picasso-scatterplot-with-images"><img className="card-img-top" src="assets/picassoScotterplotImages.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Scotterplot with custom images,  Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Scatterplot - images</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoScotterplotImages.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Scotterplot with custom images,  Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-line-chart">
         <div className="card">
-          <div className="card-header text-center">Picasso Line Chart</div>
-          <div className="card-body"><a href="#/picasso-line-chart"><img className="card-img-top" src="assets/picassoLinechart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Line Chart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Line Chart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoLinechart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Line Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-multi-line-chart">
         <div className="card">
-          <div className="card-header text-center">Picasso Multi Line Chart</div>
-          <div className="card-body"><a href="#/picasso-multi-line-chart"><img className="card-img-top" src="assets/picassoMultiLinechart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Multi Line Chart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Multi Line Chart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoMultiLinechart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Multi Line Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-combo-line-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Combo Line Barchart</div>
-          <div className="card-body"><a href="#/picasso-combo-line-barchart"><img className="card-img-top" src="assets/picassoCombochart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Scotterplot with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Combo Line Barchart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoCombochart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Scotterplot with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/stacked-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Stacked Barchart</div>
-          <div className="card-body"><a href="#/stacked-barchart"><img className="card-img-top" src="assets/picassoStackedBarchart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Stacked barchart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Stacked Barchart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoStackedBarchart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Stacked barchart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/gauge">
         <div className="card">
-          <div className="card-header text-center">Picasso Gauge</div>
-          <div className="card-body"><a href="#/gauge"><img className="card-img-top" src="assets/gauge.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Gauge with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Gauge</div>
+          <div className="card-body"><img className="card-img-top" src="assets/gauge.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Gauge with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-range-area-chart">
         <div className="card">
-          <div className="card-header text-center">Picasso Range Area Chart</div>
-          <div className="card-body"><a href="#/picasso-range-area-chart"><img className="card-img-top" src="assets/picassoRangeAreaChart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Range Area chart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Range Area Chart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoRangeAreaChart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Range Area chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-custom-combo-chart">
         <div className="card">
-          <div className="card-header text-center">Picasso Custom Combo Chart</div>
-          <div className="card-body"><a href="#/picasso-custom-combo-chart"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">
-Custom on-the-fly chart with Picasso.js & Enigma.js (Engine API)
+          <div className="card-header ">Picasso Custom Combo Chart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">
+          Custom on-the-fly chart with Picasso.js & Enigma.js
             <br />
 Start with a basic like Barchart and add as many components as you want.
           </div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-vertical-group-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Vertical Group Barhart</div>
-          <div className="card-body"><a href="#/picasso-vertical-group-barchart"><img className="card-img-top" src="assets/picassoGroupBarchart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Vertical Group Barchart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Vertical Group Barhart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoGroupBarchart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Vertical Group Barchart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-custom-vertical-group-barchart">
         <div className="card">
-          <div className="card-header text-center">Picasso Custom Group Barhart</div>
-          <div className="card-body"><a href="#/picasso-custom-vertical-group-barchart"><img className="card-img-top" src="assets/picassoCustomGroupBarchart.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Custom Vertical Group Barchart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Custom Group Barhart</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoCustomGroupBarchart.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Custom Vertical Group Barchart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
-      <div className="col-md-4">
+      </a>
+      <a href="#/picasso-gantt">
         <div className="card">
-          <div className="card-header text-center">Picasso Gannt</div>
-          <div className="card-body"><a href="#/picasso-gantt"><img className="card-img-top" src="assets/picassoGantt.png" alt="Embedded Native Object" /></a></div>
-          <div className="card-footer text-muted">Gantt Chart with Picasso.js & Enigma.js (Engine API)</div>
+          <div className="card-header ">Picasso Gannt</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoGantt.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Gantt Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
         </div>
-      </div>
-
+      </a>
     </div>
+
   </div>
+
 );
 
 export default Home;
