@@ -45,7 +45,7 @@ const disCode = {
 };
 
 const SelectionToolbar = () => (
-  <div>
+  <div className="singlepage">
     <div className="row">
       <div className="col-md-12">
         <QdtComponent type={viz1.type} props={viz1.props} />

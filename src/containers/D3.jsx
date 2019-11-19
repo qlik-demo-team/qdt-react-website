@@ -13,8 +13,8 @@ const disCode = {
 };
 
 const Search = () => (
-  <div>
-    <div className="row pb50">
+  <div className="singlepage">
+    <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type="QdtSelectionToolbar" props={{ height: '300px' }} />
       </div>

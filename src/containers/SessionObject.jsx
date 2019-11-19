@@ -179,8 +179,8 @@ const disCode = {
 };
 
 const SessionObject = () => (
-  <div>
-    <div className="row pb50">
+  <div className="singlepage">
+    <div className="row">
       <div className="col-md-12 text-right">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
