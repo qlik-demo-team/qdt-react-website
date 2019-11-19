@@ -8,6 +8,8 @@ const disCode = {
 
 const MapBox = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>MapBox</h2>
     <div className="row">
       <div className="col-md-12">
         <QdtComponent
@@ -34,6 +36,8 @@ const MapBox = () => (
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 

@@ -33,6 +33,9 @@ const disCode = {
 
 const PicassoRangeAreaChart = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Range Area chart made with Picasso</h2>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
@@ -59,6 +62,8 @@ const PicassoRangeAreaChart = () => (
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 

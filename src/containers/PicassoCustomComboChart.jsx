@@ -124,6 +124,8 @@ const disCode = {
 
 const PicassoVerticalBarchart = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Custom Combo Chart made with Picasso</h2>
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
@@ -166,6 +168,8 @@ In the first example &quot;custom1&quot;, I used an already predefined setting,
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 

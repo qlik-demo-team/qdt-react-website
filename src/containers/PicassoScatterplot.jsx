@@ -21,6 +21,9 @@ const viz2 = {
 
 const Scotterplot = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Scatterplot made with Picasso</h2>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
@@ -31,6 +34,8 @@ const Scotterplot = () => (
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 
