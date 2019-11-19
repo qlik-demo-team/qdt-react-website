@@ -88,20 +88,29 @@ const disCode = {
 
 const Table = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Data Filters</h2>
+
+    <div className="row pb50">
+      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3">
+        <h3>Dropdown component</h3>
+
+        <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3">
+        <h3>List component</h3>
+
+        <QdtComponent type={viz3.type} props={viz3.props} />
+      </div>
+      <div className="col-12 mb-3">
+        <h3>Expanded List component</h3>
+
+        <QdtComponent type={viz4.type} props={viz4.props} />
+      </div>
+    </div>
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
-      </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3">
-        <QdtComponent type={viz2.type} props={viz2.props} />
-      </div>
-      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3">
-        <QdtComponent type={viz3.type} props={viz3.props} />
-      </div>
-      <div className="col-12">
-        <QdtComponent type={viz4.type} props={viz4.props} />
       </div>
     </div>
     <div className="row">
@@ -120,6 +129,8 @@ const Table = () => (
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 
