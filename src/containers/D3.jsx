@@ -25,17 +25,11 @@ const Search = () => (
           type="QdtD3"
           props={{
             type: 'comboLineBarchart',
-            // cols: [
-            //   'Case Owner Group',
-            //   '=Sum([Number of New Cases])',
-            //   '=Num(Avg([Case Duration Time]), \'##.0\')',
-            // ],
             cols: [
               'Case Owner Group',
               '=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )',
               '=Count( {$<Priority={\'Medium\'}, Status -={\'Closed\'} >} Distinct %CaseId )',
             ],
-            // cols: ['Case Owner Group', 'Priority', '=Count(Distinct [%CaseId])'],
             outerHeight: 300,
             qInterColumnSortOrder: [1, 0],
             qSuppressZero: true,
@@ -51,7 +45,7 @@ const Search = () => (
     </div>
     <div className="row pb50">
       <div className="col-md-12">
-        <QdtComponent
+        {/* <QdtComponent
           type="QdtD3"
           props={{
             type: 'barchart',
@@ -67,12 +61,12 @@ const Search = () => (
             },
             canvas: true,
           }}
-        />
+        /> */}
       </div>
     </div>
     <div className="row pb50">
       <div className="col-md-12">
-        <QdtComponent
+        {/* <QdtComponent
           type="QdtD3"
           props={{
             type: 'barchart',
@@ -87,12 +81,12 @@ const Search = () => (
               qHeight: 10,
             },
           }}
-        />
+        /> */}
       </div>
     </div>
     <div className="row pb50">
       <div className="col-md-12">
-        <QdtComponent
+        {/* <QdtComponent
           type="QdtD3"
           props={{
             type: 'linechart',
@@ -107,7 +101,7 @@ const Search = () => (
               qHeight: 10,
             },
           }}
-        />
+        /> */}
       </div>
     </div>
     <div className="row pb50">

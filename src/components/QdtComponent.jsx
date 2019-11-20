@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 // import QdtComponents from 'qdt-components';
 import {
-  qdtComponents, qdtComponents2, qdtComponents3, picasso,
+  qdtComponents, qdtComponents2, qdtComponents3, qdtComponents4, picasso,
 } from './QdtApp';
 import Globals from './Globals';
 
@@ -44,7 +44,7 @@ Globals.picasso = picasso;
 function QdtComponent(props) {
   const node = useRef(null);
   const {
-    type, props: qProps, app2, app3,
+    type, props: qProps, app2, app3, app4,
   } = props;
 
   useEffect(() => {
@@ -152,10 +152,12 @@ function QdtComponent(props) {
       });
     } else if (app3) {
       qdtComponents3.render(type, qProps, node.current);
+    } else if (app4) {
+      qdtComponents4.render(type, qProps, node.current);
     } else {
       qdtComponents.render(type, qProps, node.current);
     }
-  }, [type, qProps, app2, app3]);
+  }, [type, qProps, app2, app3, app4]);
 
   return (
     <div ref={node} />
@@ -167,10 +169,12 @@ QdtComponent.propTypes = {
   props: PropTypes.object.isRequired,
   app2: PropTypes.bool,
   app3: PropTypes.bool,
+  app4: PropTypes.bool,
 };
 QdtComponent.defaultProps = {
   app2: false,
   app3: false,
+  app4: false,
 };
 
 export default QdtComponent;

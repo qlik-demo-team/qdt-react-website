@@ -48,11 +48,27 @@ const options3 = {
   },
 };
 
+const options4 = {
+  config: {
+    host: 'sense-demo.qlik.com',
+    secure: true,
+    port: 443,
+    prefix: '',
+    appId: '61b83b90-3fa2-4fac-a771-c534100a6005', // MLS Salaries
+  },
+  connections: {
+    vizApi: false,
+    engineApi: true,
+    useUniqueSessionID,
+  },
+};
+
 const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
 const qdtComponents2 = new QdtComponents(options2.config, options2.connections);
 const qdtComponents3 = new QdtComponents(options3.config, options3.connections);
+const qdtComponents4 = new QdtComponents(options4.config, options3.connections);
 const { picasso } = QdtComponents;
 
 export {
-  qdtComponents, qdtComponents2, qdtComponents3, picasso,
+  qdtComponents, qdtComponents2, qdtComponents3, qdtComponents4, picasso,
 };
