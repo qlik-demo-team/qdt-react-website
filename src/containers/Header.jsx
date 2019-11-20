@@ -5,7 +5,7 @@ const Header = () => (
   <div className="singlepage">
     <div className="row">
       <div className="col-md-12 text-center">
-        <a href="#/"><img src="/assets/react_Qdt.png" className="banner" alt="Qdt and React" /></a>
+        <a href="#/"><img src="assets/react_Qdt.png" className="banner" alt="Qdt and React" /></a>
         <h3>
             This is a React (
           {dependencies.react}
