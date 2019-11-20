@@ -8,17 +8,56 @@ const viz1 = {
     type: 'QdtSelectionToolbar', height: '300px',
   },
 };
+
 const viz2 = {
   type: 'QdtTable',
   props: {
     cols: [
-      'Case Owner',
-      'Employee Status',
-      "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
+      {
+        qDef: {
+          qLabel: 'Year',
+          qFieldDefs: ['Year'],
+        },
+      },
+      {
+        qDef: {
+          qLabel: 'Champion',
+          qFieldDefs: ['Champion_Full'],
+          qSortCriterias: [{ qSortByAscii: 1 }],
+        },
+      },
+      {
+        qDef: {
+          qLabel: 'Runner Up',
+          qFieldDefs: ['Runner-Up_Full'],
+          qSortCriterias: [{ qSortByAscii: 1 }],
+        },
+      },
+      {
+        qDef: {
+          qLabel: "Champion's Payroll",
+          qDef: '=Sum(if(Club = [Champion], [Total Compensation]))',
+          qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+        },
+        qSortBy: { qSortByNumeric: -1 },
+      },
+      {
+        qDef: {
+          qLabel: 'Runner-up Payroll',
+          qDef: '=Sum(if(Club = [Runner-up], [Total Compensation]))',
+          qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+        },
+        qSortBy: { qSortByNumeric: -1 },
+      },
+      {
+        qDef: {
+          qLabel: 'Chamption Payroll Difference vs. Runner-up',
+          qDef: '=Sum(if(Club = Champion, [Total Compensation]))-Sum(if(Club = [Runner-up], [Total Compensation]))',
+          qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+        },
+        qSortBy: { qSortByNumeric: -1 },
+      },
     ],
-    // options: {
-    //   columnWidths: ['50', '50'],
-    // },
     height: 400,
     rowHeight: 40,
   },
@@ -28,16 +67,57 @@ const disCode = {
   template: '<QdtComponent type={viz2.type} props={viz2.props} />',
   code: `
     const viz2 = {
-        type: 'QdtTable',
-        props: {
-          cols: [
-            'Case Owner',
-            'Employee Status',
-            "=Count( {$<Status -={'Closed'} >} Distinct %CaseId )",
-          ],
-          height: 400,
-          rowHeight: 40,
-        },
+      type: 'QdtTable',
+      props: {
+        cols: [
+          {
+            qDef: {
+              qLabel: 'Year',
+              qFieldDefs: ['Year'],
+            },
+          },
+          {
+            qDef: {
+              qLabel: 'Champion',
+              qFieldDefs: ['Champion_Full'],
+              qSortCriterias: [{ qSortByAscii: 1 }],
+            },
+          },
+          {
+            qDef: {
+              qLabel: 'Runner Up',
+              qFieldDefs: ['Runner-Up_Full'],
+              qSortCriterias: [{ qSortByAscii: 1 }],
+            },
+          },
+          {
+            qDef: {
+              qLabel: "Champion's Payroll",
+              qDef: '=Sum(if(Club = [Champion], [Total Compensation]))',
+              qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+            },
+            qSortBy: { qSortByNumeric: -1 },
+          },
+          {
+            qDef: {
+              qLabel: 'Runner-up Payroll',
+              qDef: '=Sum(if(Club = [Runner-up], [Total Compensation]))',
+              qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+            },
+            qSortBy: { qSortByNumeric: -1 },
+          },
+          {
+            qDef: {
+              qLabel: 'Chamption Payroll Difference vs. Runner-up',
+              qDef: '=Sum(if(Club = Champion, [Total Compensation]))-Sum(if(Club = [Runner-up], [Total Compensation]))',
+              qNumFormat: { qType: 'M', qFmt: '$#,##0', qThou: ',' },
+            },
+            qSortBy: { qSortByNumeric: -1 },
+          },
+        ],
+        height: 400,
+        rowHeight: 40,
+      },
     };`,
 };
 
@@ -48,12 +128,12 @@ const Table = () => (
 
     <div className="row">
       <div className="col-md-12 text-left">
-        <QdtComponent type={viz1.type} props={viz1.props} />
+        <QdtComponent type={viz1.type} props={viz1.props} app4 />
       </div>
     </div>
     <div className="row pb50">
       <div className="col-md-12">
-        <QdtComponent type={viz2.type} props={viz2.props} />
+        <QdtComponent type={viz2.type} props={viz2.props} app4 />
       </div>
     </div>
     <div className="row">
