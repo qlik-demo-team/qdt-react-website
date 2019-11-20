@@ -8,6 +8,8 @@ const disCode = {
 
 const EmbedObject = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>KPI component</h2>
     <div className="row">
       <div className="col-md-4 text-center">
         <h5>High Priority Cases</h5>
@@ -30,6 +32,8 @@ const EmbedObject = () => (
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 

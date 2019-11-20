@@ -119,9 +119,9 @@ const Home = () => (
 
       <a href="#/picasso-horizontal-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Horizontal Barchart</div>
+          <div className="card-header ">Picasso Horizontal Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoHorizontalBarchart.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Custom Horizontal Barchart with Picasso.js & Enigma.js</div>
+          <div className="card-footer ">Custom Horizontal Bar Chart with Picasso.js & Enigma.js</div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
           </div>
@@ -129,9 +129,9 @@ const Home = () => (
       </a>
       <a href="#/picasso-vertical-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Vertical Barchart</div>
+          <div className="card-header ">Picasso Vertical Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoVerticalBarchart.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Custom Vertical Barchart with Picasso.js & Enigma.js</div>
+          <div className="card-footer ">Custom Vertical Bar Chart with Picasso.js & Enigma.js</div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
           </div>
@@ -189,7 +189,7 @@ const Home = () => (
       </a>
       <a href="#/picasso-combo-line-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Combo Line Barchart</div>
+          <div className="card-header ">Picasso Combo Line Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoCombochart.png" alt="Embedded Native Object" /></div>
           <div className="card-footer ">Scotterplot with Picasso.js & Enigma.js</div>
           <div className="badges">
@@ -199,9 +199,9 @@ const Home = () => (
       </a>
       <a href="#/stacked-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Stacked Barchart</div>
+          <div className="card-header ">Picasso Stacked Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoStackedBarchart.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Stacked barchart with Picasso.js & Enigma.js</div>
+          <div className="card-footer ">Stacked Bar Chart with Picasso.js & Enigma.js</div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
           </div>
@@ -234,7 +234,7 @@ const Home = () => (
           <div className="card-footer ">
           Custom on-the-fly chart with Picasso.js & Enigma.js
             <br />
-Start with a basic like Barchart and add as many components as you want.
+Start with a basic like Bar Chart and add as many components as you want.
           </div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
@@ -243,9 +243,9 @@ Start with a basic like Barchart and add as many components as you want.
       </a>
       <a href="#/picasso-vertical-group-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Vertical Group Barhart</div>
+          <div className="card-header ">Picasso Vertical Group Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoGroupBarchart.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Vertical Group Barchart with Picasso.js & Enigma.js</div>
+          <div className="card-footer ">Vertical Group Bar Chart with Picasso.js & Enigma.js</div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
           </div>
@@ -253,9 +253,9 @@ Start with a basic like Barchart and add as many components as you want.
       </a>
       <a href="#/picasso-custom-vertical-group-barchart">
         <div className="card">
-          <div className="card-header ">Picasso Custom Group Barhart</div>
+          <div className="card-header ">Picasso Custom Group Bar Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoCustomGroupBarchart.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Custom Vertical Group Barchart with Picasso.js & Enigma.js</div>
+          <div className="card-footer ">Custom Vertical Group Bar Chart with Picasso.js & Enigma.js</div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>
           </div>

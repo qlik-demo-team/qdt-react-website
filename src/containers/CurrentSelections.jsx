@@ -15,26 +15,6 @@ const viz2 = {
   },
 };
 
-const viz3 = {
-  type: 'QdtViz',
-  props: {
-    type: 'QdtViz', id: 'jTuCwkB', height: '300px',
-  },
-};
-
-const viz4 = {
-  type: 'QdtViz',
-  props: {
-    type: 'QdtViz', id: 'JARjh', height: '300px',
-  },
-};
-
-const viz5 = {
-  type: 'QdtViz',
-  props: {
-    type: 'QdtViz', id: 'JsVPe', height: '300px',
-  },
-};
 
 const disCode = {
   template: '<QdtComponent type={viz1.type} props={viz1.props} />',
@@ -46,27 +26,22 @@ const disCode = {
 
 const SelectionToolbar = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Showing current selections toolbar</h2>
     <div className="row">
       <div className="col-md-12">
+        <h3>Current selections toolbar component</h3>
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
     <div className="row pb50">
       <div className="col-md-12">
+        <h3>Select items below to perform a selection and see how the toolbar works</h3>
+
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
-    <div className="row pb50">
-      <div className="col-md-4">
-        <QdtComponent type={viz3.type} props={viz3.props} />
-      </div>
-      <div className="col-md-4">
-        <QdtComponent type={viz4.type} props={viz4.props} />
-      </div>
-      <div className="col-md-4">
-        <QdtComponent type={viz5.type} props={viz5.props} />
-      </div>
-    </div>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Define the props in your code</h5>

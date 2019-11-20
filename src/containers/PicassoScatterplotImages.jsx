@@ -37,6 +37,9 @@ const disCode = {
 
 const ScotterplotImages = () => (
   <div className="singlepage">
+    <a className="link" href="../">🢐 back to gallery</a>
+    <h2>Scatterplot including images made with Picasso</h2>
+
     <div className="row">
       <div className="col-md-12">
         <QdtComponent type={viz2.type} props={viz2.props} />
@@ -58,6 +61,8 @@ const ScotterplotImages = () => (
         </Highlight>
       </div>
     </div>
+    <a className="link" href="../">🢐 back to gallery</a>
+
   </div>
 );
 
