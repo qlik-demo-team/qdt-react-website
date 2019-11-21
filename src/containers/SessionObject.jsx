@@ -181,8 +181,8 @@ const disCode = {
 const SessionObject = () => (
   <div className="singlepage">
     <a className="link" href="../">🢐 back to gallery</a>
-    <h2>Selection Object</h2>
-
+    <h2>Session Object</h2>
+    <div className="">Create an object programatically by defining its properties</div>
     <div className="row">
       <div className="col-md-12 text-right">
         <QdtComponent type={viz1.type} props={viz1.props} />
