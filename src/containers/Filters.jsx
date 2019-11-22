@@ -13,7 +13,7 @@ const viz2 = {
   type: 'QdtFilter',
   props: {
     cols: ['Case Owner Group'],
-    placeholder: 'Case Owner',
+    placeholder: 'Case Owner Group',
     single: true,
     autoSortByState: 0,
     showStateInDropdown: true,
@@ -22,7 +22,7 @@ const viz2 = {
 const viz3 = {
   type: 'QdtFilter',
   props: {
-    cols: ['Case Owner Group'],
+    cols: ['Case Owner'],
     placeholder: 'Expanded',
     expanded: true,
   },
@@ -31,7 +31,6 @@ const viz4 = {
   type: 'QdtFilter',
   props: {
     cols: ['Case Owner Group'],
-    placeholder: 'Expanded',
     single: true,
     expandedHorizontal: true,
     expandedHorizontalSense: false,
