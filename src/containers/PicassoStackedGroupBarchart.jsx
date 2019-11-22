@@ -35,7 +35,7 @@ const disCode = {
 
 const PicassoHorizontalBarchart = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Stacked Group Bar chart made with Picasso</h2>
 
     <div className="row">
@@ -64,7 +64,7 @@ const PicassoHorizontalBarchart = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

@@ -109,7 +109,7 @@ const disCode = {
 
 const PicassoVerticalBarchart = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Custom Group Barchart made with Picasso</h2>
     <div className="row">
       <div className="col-md-12 text-left">
@@ -142,7 +142,7 @@ const PicassoVerticalBarchart = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

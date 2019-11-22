@@ -44,7 +44,7 @@ const disCode = {
 
 const PicassoVerticalBarchart = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Vertical Bar chart made with Picasso</h2>
 
     <div className="row">
@@ -73,7 +73,7 @@ const PicassoVerticalBarchart = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

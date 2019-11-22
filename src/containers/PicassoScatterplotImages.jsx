@@ -37,7 +37,7 @@ const disCode = {
 
 const ScotterplotImages = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Scatterplot including images made with Picasso</h2>
 
     <div className="row">
@@ -61,7 +61,7 @@ const ScotterplotImages = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

@@ -180,7 +180,7 @@ const disCode = {
 
 const SessionObject = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Session Object</h2>
     <div className="">Create an object programatically by defining its properties</div>
     <div className="row">
@@ -212,7 +212,7 @@ const SessionObject = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );
