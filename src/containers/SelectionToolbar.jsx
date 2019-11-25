@@ -31,7 +31,7 @@ const disCode = {
 
 const SelectionToolbar = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Selection Toolbar</h2>
 
     <div className="row">
@@ -60,7 +60,7 @@ const SelectionToolbar = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

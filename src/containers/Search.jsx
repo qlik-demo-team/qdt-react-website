@@ -37,7 +37,7 @@ const disCode = {
 
 const Search = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Search object</h2>
 
     <div className="row">
@@ -71,7 +71,7 @@ const Search = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );
