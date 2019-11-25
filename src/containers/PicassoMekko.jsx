@@ -3,23 +3,48 @@ import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
 const disCode = {
-  template: '<QdtComponent type="QdtKpi" props={{cols: [`=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )`]}} />',
+  template: `
+    <QdtComponent
+      type="QdtPicasso"
+      props={{
+        type: 'merimekko',
+        cols: [
+          'Case Owner Group',
+          'Priority',
+          '=Count(Distinct {$<[Case Is Closed] ={'False'} >} [%CaseId])',
+        ],
+        outerHeight: 300,
+      }}
+    />
+  `,
 };
 
 const MapBox = () => (
   <div className="singlepage">
 
     <a className="link" href="#/">🢐 back to gallery</a>
-    <h2>Mekkochart made with Picasso</h2>
+    <h2>Merimekko chart made with Picasso</h2>
     <div className="row">
       <div className="col-md-12">
         <QdtComponent
           type="QdtPicasso"
           props={{
-            type: 'mekko',
-            cols: ['Department', 'Date.Year', '=Avg([Case Duration Time])'],
-            outerHeight: 300,
+            type: 'merimekko',
+            cols: [
+              'Case Owner Group',
+              'Priority',
+              '=Count(Distinct {$<[Case Is Closed] ={\'False\'} >} [%CaseId])',
+            ],
+            outerHeight: 600,
           }}
+        />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12">
+        <QdtComponent
+          type="QdtSelectionToolbar"
+          props={{ height: '300px' }}
         />
       </div>
     </div>

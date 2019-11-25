@@ -271,6 +271,16 @@ Start with a basic like Bar Chart and add as many components as you want.
           </div>
         </div>
       </a>
+      <a href="#/picasso-mekko">
+        <div className="card">
+          <div className="card-header ">Picasso Mekko</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoMekko.png" alt="Embedded Native Object" /></div>
+          <div className="card-footer ">Mekko Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
+        </div>
+      </a>
     </div>
 
   </div>
