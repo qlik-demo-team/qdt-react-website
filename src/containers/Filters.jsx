@@ -90,17 +90,22 @@ const Table = () => (
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Data Filters</h2>
 
-    <div className="row pb50">
+    <div className="row ">
       <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3 object">
         <h3>Dropdown component</h3>
 
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
+    </div>
+    <div className="row">
       <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3 object">
         <h3>List component</h3>
 
         <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
+    </div>
+    <div className="row">
+
       <div className="col-12 mb-3 object">
         <h3>Expanded List component</h3>
 

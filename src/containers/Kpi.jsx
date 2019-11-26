@@ -31,23 +31,24 @@ const EmbedObject = () => (
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
+
     <div className="row">
+      <div className="col-md-4 text-center ">
+        <h5>High Priority Cases</h5>
+        <h1 className="object" style={{ color: '#F93F16', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
+      </div>
       <div className="col-md-4 text-center">
-        <QdtComponent type={viz2.type} props={viz2.props} />
+        <h5>Medium Priority Cases</h5>
+        <h1 className="object" style={{ color: '#FFCF02', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
+      </div>
+      <div className="col-md-4 text-center">
+        <h5>Low Priority Cases</h5>
+        <h1 className="object" style={{ color: '#266E27', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'Low'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
       </div>
     </div>
     <div className="row">
       <div className="col-md-4 text-center">
-        <h5>High Priority Cases</h5>
-        <h1 style={{ color: '#F93F16', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
-      </div>
-      <div className="col-md-4 text-center">
-        <h5>Medium Priority Cases</h5>
-        <h1 style={{ color: '#FFCF02', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
-      </div>
-      <div className="col-md-4 text-center">
-        <h5>Low Priority Cases</h5>
-        <h1 style={{ color: '#266E27', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'Low'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
+        <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
     <div className="row">
