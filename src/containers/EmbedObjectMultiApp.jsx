@@ -25,7 +25,7 @@ const disCode = {
 
 const EmbedObject = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Embedding objects from multiple Qlik Sense apps</h2>
     <div className="subtitle">Selections performed in App #1 only affects App #1 charts, same goes for App #2</div>
     <div className="row">
@@ -68,7 +68,7 @@ const EmbedObject = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

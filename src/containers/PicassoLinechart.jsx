@@ -32,7 +32,7 @@ const disCode = {
 const PicassoLinechart = () => (
   <div className="singlepage">
 
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Linechart made with Picasso</h2>
     <div className="row">
       <div className="col-md-12 text-left">
@@ -60,7 +60,7 @@ const PicassoLinechart = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

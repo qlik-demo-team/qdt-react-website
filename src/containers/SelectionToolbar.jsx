@@ -31,16 +31,16 @@ const disCode = {
 
 const SelectionToolbar = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Selection Toolbar</h2>
 
     <div className="row">
-      <div className="col-md-12 text-left">
+      <div className="col-md-12 text-left object">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
     <div className="row pb50">
-      <div className="col-md-12">
+      <div className="col-md-6">
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
@@ -60,7 +60,7 @@ const SelectionToolbar = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

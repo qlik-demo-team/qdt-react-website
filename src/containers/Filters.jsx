@@ -50,24 +50,24 @@ const disCode = {
   const viz1 = {
     type: 'QdtSelectionToolbar',
     props: {
-      type: 'QdtSelectionToolbar', 
+      type: 'QdtSelectionToolbar',
       height: '300px',
     },
   };
   const viz2 = {
     type: 'QdtFilter',
     props: {
-      cols: ['Case Owner Group'], 
-      placeholder: 'Case Owner', 
+      cols: ['Case Owner Group'],
+      placeholder: 'Case Owner Group',
       single: true,
-      autoSortByState: 0, 
+      autoSortByState: 0,
       showStateInDropdown: true,
     },
   };
   const viz3 = {
     type: 'QdtFilter',
     props: {
-      cols: ['Case Owner Group'],
+      cols: ['Case Owner'],
       placeholder: 'Expanded',
       expanded: true,
     },
@@ -76,32 +76,32 @@ const disCode = {
     type: 'QdtFilter',
     props: {
       cols: ['Case Owner Group'],
-      placeholder: 'Expanded',
       single: true,
       expandedHorizontal: true,
       expandedHorizontalSense: false,
       autoSortByState: 0,
     },
-  };`,
+  };
+  `,
 };
 
 const Table = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Data Filters</h2>
 
     <div className="row pb50">
-      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3">
+      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3 object">
         <h3>Dropdown component</h3>
 
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
-      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3">
+      <div className="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-3 object">
         <h3>List component</h3>
 
         <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
-      <div className="col-12 mb-3">
+      <div className="col-12 mb-3 object">
         <h3>Expanded List component</h3>
 
         <QdtComponent type={viz4.type} props={viz4.props} />
@@ -128,7 +128,7 @@ const Table = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

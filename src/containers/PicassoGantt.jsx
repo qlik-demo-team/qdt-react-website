@@ -59,7 +59,7 @@ const disCode = {
 
 const PicassoGantt = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Gantt Chart made with Picasso</h2>
     <div className="row">
       <div className="col-md-12 text-left">
@@ -87,7 +87,7 @@ const PicassoGantt = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

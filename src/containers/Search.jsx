@@ -3,9 +3,10 @@ import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
 const viz1 = {
-  type: 'QdtSelectionToolbar',
+  type: 'QdtButton',
   props: {
-    type: 'QdtSelectionToolbar', height: '300px',
+    type: 'clearSelections',
+    title: 'Clear Selections',
   },
 };
 const viz2 = {
@@ -21,7 +22,7 @@ const viz3 = {
     single: false,
     inverse: false,
     placeholder: 'Search Case Owner',
-    tooltipContent: '<h5>SEARCH</h5>Case owner to compare cases.',
+    // tooltipContent: '<h5>SEARCH</h5>Case owner to compare cases.',
   },
 };
 
@@ -37,22 +38,23 @@ const disCode = {
 
 const Search = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Search object</h2>
 
-    <div className="row">
-      <div className="col-md-12 text-left">
-        <QdtComponent type={viz1.type} props={viz1.props} />
-      </div>
-    </div>
+
     <div className="row pb50">
-      <div className="col-md-12">
+      <div className="col-md-6 object">
         <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>
-    <div className="row pb50">
-      <div className="col-md-12">
+    <div className="row">
+
+
+      <div className="col-md-6">
         <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+      <div className="col-md-2 text-left">
+        <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
     <div className="row">
@@ -71,7 +73,7 @@ const Search = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

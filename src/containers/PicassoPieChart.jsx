@@ -32,7 +32,7 @@ const disCode = {
 
 const PieChart = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Pie Chart made with Picasso</h2>
 
     <div className="row">
@@ -61,7 +61,7 @@ const PieChart = () => (
         </Highlight>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );

@@ -123,17 +123,18 @@ const disCode = {
 
 const Table = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Table (Engine API)</h2>
 
+
+    <div className="row pb50">
+      <div className="col-md-12 object">
+        <QdtComponent type={viz2.type} props={viz2.props} app4 />
+      </div>
+    </div>
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} app4 />
-      </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-md-12">
-        <QdtComponent type={viz2.type} props={viz2.props} app4 />
       </div>
     </div>
     <div className="row">
@@ -158,7 +159,7 @@ const Table = () => (
         <a href="https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/CapabilityAPIs/VisualizationAPI/table-properties.htm">https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/CapabilityAPIs/VisualizationAPI/table-properties.htm</a>
       </div>
     </div>
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
 
   </div>
 );
