@@ -3,7 +3,20 @@ import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
 const disCode = {
-  template: '<QdtComponent type="QdtKpi" props={{cols: [`=Count( {$<Priority={\'High\'}, Status -={\'Closed\'} >} Distinct %CaseId )`]}} />',
+  template: `
+    <QdtComponent
+      type="QdtMapBox"
+      props={{
+        cols: ['ID', 'lat', 'lon', 'gender'],
+        height: 400,
+        qPage: {
+          qTop: 0,
+          qLeft: 0,
+          qWidth: 4,
+          qHeight: 2500,
+        },
+      }}
+  `,
 };
 
 const MapBox = () => (
