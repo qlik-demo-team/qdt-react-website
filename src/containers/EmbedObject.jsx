@@ -2,13 +2,8 @@ import React from 'react';
 import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
+
 const viz1 = {
-  type: 'QdtSelectionToolbar',
-  props: {
-    type: 'QdtSelectionToolbar', height: '300px',
-  },
-};
-const viz2 = {
   type: 'QdtViz',
   props: {
     type: 'barchart',
@@ -24,29 +19,19 @@ const viz2 = {
   },
 };
 
-const viz3 = {
+const viz2 = {
   type: 'QdtButton',
   props: {
     type: 'clearSelections',
-    title: 'Clear All',
+    title: 'Clear Chart Selections',
   },
 };
 
-const viz4 = {
-  type: 'QdtFilter',
-  props: {
-    cols: ['Case Owner Group'],
-    placeholder: 'Case Owner',
-    single: true,
-    autoSortByState: 0,
-    showStateInDropdown: true,
-  },
-};
 
 const disCode = {
-  template: '<QdtComponent type={viz2.type} props={viz2.props} />',
+  template: '<QdtComponent type={viz1.type} props={viz1.props} />',
   code: `
-    const viz2 = {
+    const viz1 = {
       type: 'QdtViz',
       props: {
         type: 'barchart', 
@@ -64,27 +49,17 @@ const disCode = {
 const EmbedObject = () => (
   <div className="singlepage">
     <a className="link" href="../">🢐 back to gallery</a>
-    <h2>Embedding Qlik Object(s) into your website</h2>
+    <h2>Embedding a Qlik Chart into your website</h2>
     <div className="row">
-      <div className="col-md-12 text-left">
+      <div className="col-md-6 object">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-md-12 text-left">
-        <QdtComponent type={viz4.type} props={viz4.props} />
-      </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-md-12">
-        <QdtComponent type={viz3.type} props={viz3.props} />
-      </div>
-    </div>
-    <div className="row pb50">
-      <div className="col-md-12">
+      <div className="col-md-2">
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
+
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Define the props in your code</h5>
