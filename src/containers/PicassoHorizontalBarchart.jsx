@@ -27,7 +27,8 @@ const viz2 = {
   type: 'QdtPicasso',
   props: {
     type: 'horizontalBarchart',
-    cols: ['Date', '=Sum([Number of New Cases])'],
+    // cols: ['Date', '=Sum([Number of New Cases])'],
+    cols: ['Case Owner Group', '=Avg([Case Duration Time])'],
     // cols: ['Contributor Name', '=Sum([Total Amount])'], // NP for testing
     outerHeight: 500,
     qInterColumnSortOrder: [1, 0],
