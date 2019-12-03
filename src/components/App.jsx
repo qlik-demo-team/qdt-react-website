@@ -25,6 +25,8 @@ import PicassoCustomChart2 from '../containers/PicassoCustomChart2';
 import PicassoVerticalGroupBarchart from '../containers/PicassoVerticalGroupBarchart';
 import PicassoCustomVerticalGroupBarchart from '../containers/PicassoCustomVerticalGroupBarchart';
 import PicassoStackedGroupBarchart from '../containers/PicassoStackedGroupBarchart';
+import PicassoPointDistribution from '../containers/PicassoPointDistribution';
+import PicassoPyramid from '../containers/PicassoPyramid';
 import D3 from '../containers/D3';
 import Table from '../containers/Table';
 import TableEngine from '../containers/TableEngine';
@@ -64,8 +66,10 @@ const App = () => (
             <Route exact path="/picasso-vertical-group-barchart" component={PicassoVerticalGroupBarchart} />
             <Route exact path="/picasso-custom-vertical-group-barchart" component={PicassoCustomVerticalGroupBarchart} />
             <Route exact path="/picasso-stacked-group-barchart" component={PicassoStackedGroupBarchart} />
+            <Route exact path="/picasso-point-distribution" component={PicassoPointDistribution} />
             <Route exact path="/picasso-gantt" component={PicassoGantt} />
             <Route exact path="/picasso-mekko" component={PicassoMekko} />
+            <Route exact path="/picasso-pyramid" component={PicassoPyramid} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/current-selections" component={CurrentSelections} />
             <Route exact path="/stacked-barchart" component={PicassoStackedBarchart} />
