@@ -281,6 +281,26 @@ Start with a basic like Bar Chart and add as many components as you want.
           </div>
         </div>
       </a>
+      <a href="#/picasso-point-distribution">
+        <div className="card">
+          <div className="card-header ">Picasso Point Distribution</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoPointDistribution.png" alt="Picasso Point Distribution" /></div>
+          <div className="card-footer ">Point Distributions Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
+        </div>
+      </a>
+      <a href="#/picasso-pyramid">
+        <div className="card">
+          <div className="card-header ">Picasso Pyramid</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoPyramid.png" alt="Picasso Pyramids" /></div>
+          <div className="card-footer ">Pyramid Chart with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
+        </div>
+      </a>
     </div>
 
   </div>
