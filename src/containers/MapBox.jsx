@@ -24,7 +24,7 @@ const MapBox = () => (
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>MapBox</h2>
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-6 object">
         <QdtComponent
           type="QdtMapBox"
           props={{
@@ -41,6 +41,7 @@ const MapBox = () => (
         />
       </div>
     </div>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Render in your Template</h5>

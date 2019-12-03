@@ -105,32 +105,31 @@ const PicassoLinechart = () => (
   <div className="singlepage">
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Gauge chart</h2>
+
+
     <div className="row">
-      <div className="col-md-12 text-left">
-        <QdtComponent type={viz1.type} props={viz1.props} />
+      <div className="col-md-3 text-center object">
+        <h5>
+Vertical
+
+Bar Gauge
+        </h5>
+        <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+      <div className="col-md-3 text-center object">
+        <h5>
+Gauge with Range limits
+        </h5>
+        <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>
     <div className="row">
       <div className="col-md-3 text-left">
         <QdtComponent type={viz4.type} props={viz4.props} />
       </div>
-    </div>
-    <div className="row">
-      <div className="col-md-3 text-center">
-        <h5>
-Vertical
-          <br />
-Bar Gauge
-        </h5>
-        <QdtComponent type={viz2.type} props={viz2.props} />
-      </div>
-      <div className="col-md-3 text-center">
-        <h5>
-Vertical Bar Gauge
-          <br />
-with Range limits
-        </h5>
-        <QdtComponent type={viz3.type} props={viz3.props} />
+
+      <div className="col-md-6 text-left">
+        <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
     <div className="row">

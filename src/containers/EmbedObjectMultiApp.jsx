@@ -27,14 +27,15 @@ const EmbedObject = () => (
   <div className="singlepage">
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Embedding objects from multiple Qlik Sense apps</h2>
+    <div className="subtitle">Selections performed in App #1 only affects App #1 charts, same goes for App #2</div>
     <div className="row">
       <div className="col-md-12">
         <h3>App #1: Helpdesk</h3>
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 object">
         <QdtComponent type="QdtViz" props={{ id: 'jTuCwkB', height: '300px' }} />
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 object">
         <QdtComponent type="QdtViz" props={{ id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398', height: '300px' }} />
       </div>
     </div>
@@ -44,10 +45,10 @@ const EmbedObject = () => (
       <div className="col-md-12">
         <h3>App #2: Consumer Sales</h3>
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 object">
         <QdtComponent type="QdtViz" props={{ id: 'PyQXKt', height: '300px' }} app2 />
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 object">
         <QdtComponent type="QdtViz" props={{ id: 'MRmuW', height: '300px' }} app2 />
       </div>
     </div>
