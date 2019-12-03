@@ -182,17 +182,17 @@ const SessionObject = () => (
   <div className="singlepage">
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Session Object</h2>
-    <div className="">Create an object programatically by defining its properties</div>
+    <div className="subtitle">Create an object programatically by defining its properties</div>
     <div className="row">
-      <div className="col-md-12 text-right">
+
+      <div className="col-md-6 object">
+        <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+      <div className="col-md-2  text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
-    <div className="row pb50">
-      <div className="col-md-12">
-        <QdtComponent type={viz2.type} props={viz2.props} />
-      </div>
-    </div>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Define the props in your code</h5>

@@ -61,14 +61,15 @@ const PicassoGantt = () => (
   <div className="singlepage">
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Gantt Chart made with Picasso</h2>
+
     <div className="row">
-      <div className="col-md-12 text-left">
-        <QdtComponent type={viz1.type} props={viz1.props} />
+      <div className="col-md-6 object">
+        <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
     <div className="row">
-      <div className="col-md-12">
-        <QdtComponent type={viz2.type} props={viz2.props} />
+      <div className="col-md-12 text-left">
+        <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
     <div className="row">

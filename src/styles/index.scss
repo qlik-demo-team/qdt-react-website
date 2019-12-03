@@ -91,6 +91,12 @@ a:hover{
   max-width: 1340px;
   margin: 0 auto;
 }
+.object >div {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  padding:10px;
+  background-color: white;
+}
 .link, .link:hover{
   text-decoration: underline;
 }
@@ -102,6 +108,11 @@ a:hover{
 h2{
   margin-bottom: 15px !important;
 }
+.subtitle{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
 // .qtd-button { padding: 5px 15px; border: 1px solid lightgray; }
 
 .pb5 { padding-bottom: 5px !important; }

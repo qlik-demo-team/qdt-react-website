@@ -41,7 +41,7 @@ const ScotterplotImages = () => (
     <h2>Scatterplot including images made with Picasso</h2>
 
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-6 object">
         <QdtComponent type={viz2.type} props={viz2.props} />
       </div>
     </div>
@@ -53,6 +53,7 @@ const ScotterplotImages = () => (
         </Highlight>
       </div>
     </div>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Render in your Template</h5>

@@ -126,32 +126,30 @@ const PicassoVerticalBarchart = () => (
   <div className="singlepage">
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Custom Combo Chart made with Picasso</h2>
+    <div className="subtitle">
+      <div>Custom 1 chart uses predefined setting, verticalComboChart and appended 2 lines and 3 points.</div>
+      <div>Custom 2 chart uses settings defined in a file</div>
+      <div><a className="link" href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx</a></div>
+      <div><a className="link" href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx</a></div>
+    </div>
+    <div className="row">
+      <div className="col-md-6 object">
+        <h5>Custom 1</h5>
+        <QdtComponent type={viz2.type} props={viz2.props} />
+      </div>
+
+      <div className="col-md-6 object">
+        <h5>Custom 2</h5>
+
+        <QdtComponent type={viz3.type} props={viz3.props} />
+      </div>
+    </div>
     <div className="row">
       <div className="col-md-12 text-left">
         <QdtComponent type={viz1.type} props={viz1.props} />
       </div>
     </div>
-    <div className="row">
-      <div className="col-md-12">
-        <QdtComponent type={viz2.type} props={viz2.props} />
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12">
-        <QdtComponent type={viz3.type} props={viz3.props} />
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12">
-        <p>
-In the first example &quot;custom1&quot;, I used an already predefined setting,
-        verticalComboChart and appended 2 lines and 3 points.
-        </p>
-        <p>In the second example &quot;custom2&quot;, I created the entire settings file.</p>
-        <p><a href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/pages/PicassoCustomChart.jsx</a></p>
-        <p><a href="https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx">https://github.com/qlik-demo-team/qdt-react-website/blob/master/src/components/QdtComponent.jsx</a></p>
-      </div>
-    </div>
+
     <div className="row">
       <div className="col-md-12 text-left">
         <h5>Render in your Template</h5>
