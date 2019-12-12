@@ -301,7 +301,7 @@ Start with a basic like Bar Chart and add as many components as you want.
           </div>
         </div>
       </a>
-      <a href="#/picasso-dumbbell">
+      {/* <a href="#/picasso-dumbbell">
         <div className="card">
           <div className="card-header ">Picasso Dumbbell plot</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoDumbbell.png" alt="Picasso Dumbbell" /></div>
@@ -310,7 +310,7 @@ Start with a basic like Bar Chart and add as many components as you want.
             <span className="badge badge-dark">Engine API</span>
           </div>
         </div>
-      </a>
+      </a> */}
     </div>
 
   </div>
