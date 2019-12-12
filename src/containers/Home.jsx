@@ -301,6 +301,16 @@ Start with a basic like Bar Chart and add as many components as you want.
           </div>
         </div>
       </a>
+      {/* <a href="#/picasso-dumbbell">
+        <div className="card">
+          <div className="card-header ">Picasso Dumbbell plot</div>
+          <div className="card-body"><img className="card-img-top" src="assets/picassoDumbbell.png" alt="Picasso Dumbbell" /></div>
+          <div className="card-footer ">Dumbbell Plot with Picasso.js & Enigma.js</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
+        </div>
+      </a> */}
     </div>
 
   </div>

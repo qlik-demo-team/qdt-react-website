@@ -8,6 +8,7 @@ const viz1 = {
   props: {
     type: 'barchart',
     id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398',
+    // id: 'rjcpNwp',
     height: '300px',
     exportData: true,
     // noInteraction: true,
@@ -48,7 +49,7 @@ const disCode = {
 
 const EmbedObject = () => (
   <div className="singlepage">
-    <a className="link" href="../">🢐 back to gallery</a>
+    <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Embedding a Qlik Chart into your website</h2>
     <div className="row">
       <div className="col-md-6 object">
