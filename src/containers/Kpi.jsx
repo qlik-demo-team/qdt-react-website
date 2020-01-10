@@ -33,7 +33,7 @@ const EmbedObject = () => (
     </div>
 
     <div className="row">
-      <div className="col-md-4 text-center ">
+      <div className="col-md-4 text-center">
         <h5>High Priority Cases</h5>
         <h1 className="object" style={{ color: '#F93F16', fontSize: '5rem' }}><QdtComponent type="QdtKpi" props={{ cols: ["=Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )"] }} /></h1>
       </div>

@@ -4,6 +4,7 @@ const useUniqueSessionID = Math.random().toString(32).substr(2, 8);
 
 const options = {
   config: {
+    // host: 'qseow-central',
     host: 'sense-demo.qlik.com',
     // host: 'version4.ap.qlikcloud.com',
     secure: true,
@@ -11,6 +12,7 @@ const options = {
     prefix: '',
     // appId: '45841fc2-ae9c-490c-9bc4-55592fc62afb', // NP DONATIONS with millions of rows for testing
     appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
+    // appId: '86a65c35-23bf-4e5f-928e-273ad23adcff', // Helpdesk qseow-central
     // appId: 'b3fa0fe2-10aa-4e7c-88b4-f9139c0555b4',
   },
   connections: {
@@ -72,5 +74,5 @@ const qdtComponents4 = new QdtComponents(options4.config, options3.connections);
 const { picasso } = QdtComponents;
 
 export {
-  qdtComponents, qdtComponents2, qdtComponents3, qdtComponents4, picasso,
+  qdtComponents, picasso, qdtComponents2, qdtComponents3, qdtComponents4,
 };
