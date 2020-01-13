@@ -12,7 +12,7 @@ const Scotterplot = () => (
       </div>
     </div>
     <div className="row pb50">
-      <div className="col-md-12">
+      <div className="col-md-6 object">
         <QdtComponent
           type="QdtPicasso"
           props={{
