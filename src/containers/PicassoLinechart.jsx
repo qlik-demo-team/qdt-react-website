@@ -15,6 +15,7 @@ const viz2 = {
     type: 'lineChart',
     cols: ['Date.autoCalendar.YearMonth', '=Sum([Number of New Cases])'],
     outerHeight: 300,
+    prio: 'svg',
   },
 };
 
