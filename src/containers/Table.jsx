@@ -25,6 +25,12 @@ const viz2 = {
       title: 'Resource Details',
     },
     height: '300px',
+    // exportImg: true,
+    // exportImgOptions: { width: 600, height: 400, format: 'JPG' },
+    exportPdf: true,
+    exportPdfOptions: {
+      documentSize: 'a4', aspectRatio: 0, objectSize: { height: 800, width: 600 }, orientation: 'portrait',
+    },
   },
 };
 

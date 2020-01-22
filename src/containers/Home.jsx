@@ -116,6 +116,16 @@ const Home = () => (
           </div>
         </div>
       </a>
+      <a href="#/sequencer">
+        <div className="card">
+          <div className="card-header ">SEQUENCER</div>
+          <div className="card-body"><img className="card-img-top" src="assets/sequencer.png" alt="Sequencer" /></div>
+          <div className="card-footer ">Loop through a dimension and make selections</div>
+          <div className="badges">
+            <span className="badge badge-dark">Engine API</span>
+          </div>
+        </div>
+      </a>
 
       <a href="#/picasso-horizontal-barchart">
         <div className="card">
