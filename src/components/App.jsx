@@ -38,6 +38,7 @@ import Gauge from '../containers/Gauge';
 import PicassoGantt from '../containers/PicassoGantt';
 import Kpi from '../containers/Kpi';
 import MapBox from '../containers/MapBox';
+import Sequencer from '../containers/Sequencer';
 // import Test from '../containers/Test';
 
 const App = () => (
@@ -83,6 +84,7 @@ const App = () => (
             <Route exact path="/gauge" component={Gauge} />
             <Route exact path="/kpi" component={Kpi} />
             <Route exact path="/mapbox" component={MapBox} />
+            <Route exact path="/sequencer" component={Sequencer} />
             {/* <Route exact path="/test" component={Test} /> */}
             <Route component={Home} />
 
