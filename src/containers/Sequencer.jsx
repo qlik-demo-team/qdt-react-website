@@ -7,7 +7,7 @@ const viz1 = {
   props: {
     cols: ['Date'],
     keyCode: 32,
-    delay: 1,
+    delay: 5,
     wheel: true,
   },
 };
@@ -47,6 +47,15 @@ const viz2 = {
   },
 };
 
+const viz3 = {
+  type: 'QdtViz',
+  props: {
+    type: 'barchart',
+    id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398',
+    height: '300px',
+  },
+};
+
 const disCode = {
   template: '<QdtComponent type="QdtSequencer" props={cols: [\'Date\'], keyCode: 32, delay: 1} />',
   code: `
@@ -67,6 +76,12 @@ const Table = () => (
     <div className="row pb50">
       <div className="col-md-12 object">
         <QdtComponent type={viz1.type} props={viz1.props} />
+      </div>
+    </div>
+
+    <div className="row pb50">
+      <div className="col-md-12 object">
+        <QdtComponent type={viz3.type} props={viz3.props} />
       </div>
     </div>
 
