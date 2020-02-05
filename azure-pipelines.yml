@@ -6,7 +6,7 @@ resources:
   repositories:
   - repository: qdt-react-website
     type: github
-    endpoint: qlik-demo-team
+    endpoint: github.com_demo_team
     name: qlik-demo-team/qdt-react-website
   - repository: qdt-components-ci
     type: git
