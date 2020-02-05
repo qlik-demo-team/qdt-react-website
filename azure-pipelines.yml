@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 resources:
   repositories:
-  - repository: qdt-react-website
+  - repository: qlik-demo-team/qdt-react-website
     type: github
     endpoint: github.com_demo_team
     name: qlik-demo-team/qdt-react-website
@@ -20,7 +20,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: qdt-react-website
+- checkout: qlik-demo-team/qdt-react-website
 - checkout: qdt-components-ci
 
 # - script: dir $(Build.SourcesDirectory)
