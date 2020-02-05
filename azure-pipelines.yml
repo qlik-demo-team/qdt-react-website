@@ -23,7 +23,7 @@ steps:
 - checkout: qdt-react-website
 - checkout: qdt-components-ci
 
-- script: dir $(Build.SourcesDirectory)
+# - script: dir $(Build.SourcesDirectory)
 
 - task: NodeTool@0
   inputs:
