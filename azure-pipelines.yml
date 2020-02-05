@@ -8,7 +8,7 @@ resources:
     type: github
     endpoint: qlik-demo-team
     name: qlik-demo-team/qdt-react-website
-  - repository: QdtComponentsCI
+  - repository: qdt-components-ci
     type: git
     name: QlikDemoTeam/qdt-components-ci
 
@@ -21,7 +21,7 @@ pool:
 steps:
 - checkout: self
 - checkout: qdt-react-website
-- checkout: QdtComponentsCI
+- checkout: qdt-components-ci
 
 - script: dir $(Build.SourcesDirectory)
 
