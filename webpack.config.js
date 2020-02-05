@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: ['whatwg-fetch', 'core-js/stable', 'regenerator-runtime/runtime', './src/index'],
   output: {
-    path: path.resolve(__dirname, '../qdt-apps/qdt-components/react/'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '',
     chunkFilename: 'js/[name].bundle.js',
     filename: 'js/[name].bundle.js',
