@@ -14,6 +14,6 @@ jobs:
     - name: Azure Pipelines Action
       uses: Azure/pipelines@v1
       with:
-        azure-devops-project-url: 'https://dev.azure.com/QlikDemo/qdt-react-website-ci'
+        azure-devops-project-url: 'https://dev.azure.com/QlikDemo/qdt-components-ci'
         azure-pipeline-name: 'qdt-react-website-ci'
         azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
