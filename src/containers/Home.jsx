@@ -242,9 +242,9 @@ const Home = () => (
           <div className="card-header ">Picasso Custom Combo Chart</div>
           <div className="card-body"><img className="card-img-top" src="assets/picassoCustomChart.png" alt="Embedded Native Object" /></div>
           <div className="card-footer ">
-          Custom on-the-fly chart with Picasso.js & Enigma.js
+            Custom on-the-fly chart with Picasso.js & Enigma.js
             <br />
-Start with a basic like Bar Chart and add as many components as you want.
+            Start with a basic like Bar Chart and add as many components as you want.
           </div>
           <div className="badges">
             <span className="badge badge-dark">Engine API</span>

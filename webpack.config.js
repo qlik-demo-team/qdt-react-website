@@ -66,7 +66,8 @@ module.exports = {
     alias: {
         'react': path.join(__dirname, './node_modules/react'),
         'react-dom': path.join(__dirname, '/node_modules/react-dom'),
-    }
+    },
+    symlinks: false,
     // plugins: []
   },
 }

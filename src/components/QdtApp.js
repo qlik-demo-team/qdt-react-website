@@ -1,73 +1,29 @@
-import QdtComponents from 'qdt-components';
+import { qdtEnigma, qdtCapabilityApp } from 'qdt-components';
 
-const useUniqueSessionID = Math.random().toString(32).substr(2, 8);
+const identity = Math.random().toString(32).substr(2, 8);
 
-const options = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
-  },
-  connections: {
-    vizApi: true,
-    engineApi: true,
-    useUniqueSessionID,
-  },
+const config1 = {
+  host: 'sense-demo.qlik.com',
+  secure: true,
+  port: 443,
+  prefix: '',
+  appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde', // Helpdesk
+  identity,
 };
 
-const options2 = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    appId: '372cbc85-f7fb-4db6-a620-9a5367845dce', // Consumer Sales
-  },
-  connections: {
-    vizApi: true,
-    engineApi: false,
-    useUniqueSessionID,
-  },
+const config2 = {
+  host: 'sense-demo.qlik.com',
+  secure: true,
+  port: 443,
+  prefix: '',
+  appId: '4052680c-fd97-4f49-ac83-e026cdd26d65', // Swipe Night
+  // appId: 'b707d328-bb36-4a42-b7e4-129367244cda', // staging
+  // appId: 'c6288f5a-cc82-4e1f-9303-148c3443f436',
+  identity,
 };
 
-const options3 = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    appId: '4052680c-fd97-4f49-ac83-e026cdd26d65', // Swipe Night
-  },
-  connections: {
-    vizApi: false,
-    engineApi: true,
-    useUniqueSessionID,
-  },
-};
+const app1Promise = qdtEnigma(config1);
+const app2Promise = qdtEnigma(config2);
+const app3Promise = qdtCapabilityApp(config1);
 
-const options4 = {
-  config: {
-    host: 'sense-demo.qlik.com',
-    secure: true,
-    port: 443,
-    prefix: '',
-    appId: '61b83b90-3fa2-4fac-a771-c534100a6005', // MLS Salaries
-  },
-  connections: {
-    vizApi: false,
-    engineApi: true,
-    useUniqueSessionID,
-  },
-};
-
-const qdtComponents = new QdtComponents(options.config, options.connections, options.auth);
-const qdtComponents2 = new QdtComponents(options2.config, options2.connections);
-const qdtComponents3 = new QdtComponents(options3.config, options3.connections);
-const qdtComponents4 = new QdtComponents(options4.config, options4.connections);
-const { picasso } = QdtComponents;
-
-export {
-  qdtComponents, picasso, qdtComponents2, qdtComponents3, qdtComponents4,
-};
+export { app1Promise, app2Promise, app3Promise };

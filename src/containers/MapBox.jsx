@@ -1,22 +1,33 @@
 import React from 'react';
 import Highlight from 'react-highlight.js';
+import { QdtMapBox } from 'qdt-components';
 import QdtComponent from '../components/QdtComponent';
 
 const disCode = {
   template: `
     <QdtComponent
-      type="QdtMapBox"
-      props={{
-        cols: ['ID', 'lat', 'lon', 'gender'],
-        height: 400,
-        qPage: {
-          qTop: 0,
-          qLeft: 0,
-          qWidth: 4,
-          qHeight: 2500,
-        },
-      }}
+      component={QdtMapBox}
+      options={{ height: 400 }}
+      properties={properties}
+      appIndex={2}
+    />
   `,
+};
+
+const properties = {
+  qHyperCubeDef: {
+    qDimensions: [
+      { qDef: { qFieldDefs: ['ID'] } },
+      { qDef: { qFieldDefs: ['lat'] } },
+      { qDef: { qFieldDefs: ['lon'] } },
+      { qDef: { qFieldDefs: ['gender'] } },
+    ],
+    qMeasures: [],
+    qInitialDataFetch: [{
+      qWidth: 4,
+      qHeight: 2500,
+    }],
+  },
 };
 
 const MapBox = () => (
@@ -26,18 +37,10 @@ const MapBox = () => (
     <div className="row">
       <div className="col-md-6 object">
         <QdtComponent
-          type="QdtMapBox"
-          props={{
-            cols: ['ID', 'lat', 'lon', 'gender'],
-            height: 400,
-            qPage: {
-              qTop: 0,
-              qLeft: 0,
-              qWidth: 4,
-              qHeight: 2500,
-            },
-          }}
-          app3
+          component={QdtMapBox}
+          options={{ height: 400 }}
+          properties={properties}
+          appIndex={2}
         />
       </div>
     </div>

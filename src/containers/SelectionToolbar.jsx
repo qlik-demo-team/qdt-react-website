@@ -1,5 +1,6 @@
 import React from 'react';
 import Highlight from 'react-highlight.js';
+import { QdtSelections } from 'qdt-components';
 import QdtComponent from '../components/QdtComponent';
 
 const viz1 = {
@@ -34,6 +35,14 @@ const SelectionToolbar = () => (
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Selection Toolbar</h2>
 
+    <div style={{ paddingBottom: 50 }}>
+      <QdtComponent
+        component={QdtSelections}
+        properties={{
+          qSelectionObjectDef: {},
+        }}
+      />
+    </div>
     <div className="row">
       <div className="col-md-12 text-left object">
         <QdtComponent type={viz1.type} props={viz1.props} />
