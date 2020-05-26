@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../containers/Header';
 import Home from '../containers/Home';
 import EmbedObject from '../containers/EmbedObject';
-// import EmbedObjectMultiApp from '../containers/EmbedObjectMultiApp';
+import EmbedObjectMultiApp from '../containers/EmbedObjectMultiApp';
 // import SessionObject from '../containers/SessionObject';
 import SelectionToolbar from '../containers/SelectionToolbar';
 // import PicassoHorizontalBarchart from '../containers/PicassoHorizontalBarchart';
@@ -50,7 +50,7 @@ const App = () => (
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/embed-object" component={EmbedObject} />
-            {/* <Route exact path="/embed-object-multi-app" component={EmbedObjectMultiApp} /> */}
+            <Route exact path="/embed-object-multi-app" component={EmbedObjectMultiApp} />
             {/* <Route exact path="/session-object" component={SessionObject} /> */}
             <Route exact path="/selection-toolbar" component={SelectionToolbar} />
             {/* <Route exact path="/picasso-horizontal-barchart" component={PicassoHorizontalBarchart} />

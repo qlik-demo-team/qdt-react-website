@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import {
   qdtCompose, QdtViz, // QdtMapBox, // useHyperCube, qdtDoc, // QdtTheme, QdtKpi, // QdtMapBox, useListObject, QdtSlider,
 } from 'qdt-components';
-import { app1Promise, app2Promise, app3Promise } from './QdtApp';
+import {
+  engineApiApp1Promise, engineApiApp2Promise, capabilityApiApp1Promise, capabilityApiApp2Promise,
+} from './QdtApp';
 
 function QdtComponent({
   component, properties, options, appIndex,
@@ -11,11 +13,12 @@ function QdtComponent({
   const elementRef = useRef(null);
 
   const init = async () => {
-    let _app = await app1Promise;
-    if (appIndex === 2) _app = await app2Promise;
-    if (appIndex === 3) _app = await app3Promise;
+    let _app = await engineApiApp1Promise;
+    if (appIndex === 2) _app = await engineApiApp2Promise;
+    if (appIndex === 3) _app = await capabilityApiApp1Promise;
+    if (appIndex === 4) _app = await capabilityApiApp2Promise;
     const app = _app;
-    if (appIndex === 3) {
+    if (appIndex === 3 || appIndex === 4) {
       QdtViz({
         element: elementRef.current,
         app,
@@ -32,9 +35,11 @@ function QdtComponent({
     }
   };
 
-  useEffect(() => {
-    if (elementRef) init();
-  }, [init, component]);
+  init();
+
+  // useEffect(() => {
+  //   if (elementRef) init();
+  // }, [init, component]);
 
   return (
     <div ref={elementRef} />

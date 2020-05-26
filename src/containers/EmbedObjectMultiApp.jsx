@@ -28,28 +28,56 @@ const EmbedObject = () => (
     <a className="link" href="#/">🢐 back to gallery</a>
     <h2>Embedding objects from multiple Qlik Sense apps</h2>
     <div className="subtitle">Selections performed in App #1 only affects App #1 charts, same goes for App #2</div>
+
     <div className="row">
       <div className="col-md-12">
         <h3>App #1: Helpdesk</h3>
       </div>
       <div className="col-md-6 object">
-        <QdtComponent type="QdtViz" props={{ id: 'jTuCwkB', height: '300px' }} />
+        {/* <QdtComponent type="QdtViz" props={{ id: 'jTuCwkB', height: '300px' }} /> */}
+        <QdtComponent
+          options={{
+            id: 'PAppmU',
+            height: 400,
+          }}
+          appIndex={3}
+        />
       </div>
       <div className="col-md-6 object">
-        <QdtComponent type="QdtViz" props={{ id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398', height: '300px' }} />
+        {/* <QdtComponent type="QdtViz" props={{ id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398', height: '300px' }} /> */}
+        <QdtComponent
+          options={{
+            id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398',
+            height: 400,
+          }}
+          appIndex={3}
+        />
       </div>
     </div>
+
     <div className="row pb50">
-
-
       <div className="col-md-12">
         <h3>App #2: Consumer Sales</h3>
       </div>
       <div className="col-md-6 object">
-        <QdtComponent type="QdtViz" props={{ id: 'PyQXKt', height: '300px' }} app2 />
+        {/* <QdtComponent type="QdtViz" props={{ id: 'PyQXKt', height: '300px' }} app2 /> */}
+        <QdtComponent
+          options={{
+            id: 'vCNaSe',
+            height: 400,
+          }}
+          appIndex={4}
+        />
       </div>
       <div className="col-md-6 object">
-        <QdtComponent type="QdtViz" props={{ id: 'MRmuW', height: '300px' }} app2 />
+        {/* <QdtComponent type="QdtViz" props={{ id: 'MRmuW', height: '300px' }} app2 /> */}
+        <QdtComponent
+          options={{
+            id: 'akDGX',
+            height: 400,
+          }}
+          appIndex={4}
+        />
       </div>
     </div>
     <div className="row">

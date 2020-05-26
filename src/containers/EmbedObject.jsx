@@ -3,8 +3,31 @@ import Highlight from 'react-highlight.js';
 import QdtComponent from '../components/QdtComponent';
 
 const disCode = {
-  template: '<QdtComponent type={viz1.type} props={viz1.props} />',
+  template: '<div ref={elementRef} />',
   code: `
+    import { qdtCapabilityApp, QdtViz } from 'qdt-components';
+
+    const config = {
+      host: '<your-sense-server>',
+      secure: true,
+      port: 443,
+      prefix: '',
+      appId: '<your-app-id>',
+    };
+    
+    const appPromise = qdtCapabilityApp(config);
+
+    const init = async () => {
+      const app = await appPromise;
+      QdtViz({
+        element: elementRef.current,
+        options={{
+          id: 'a5e0f12c-38f5-4da9-8f3f-0e4566b28398',
+          height: 400,
+        }},
+        app,
+      });
+    };
   `,
 };
 

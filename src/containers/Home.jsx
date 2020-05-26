@@ -18,6 +18,7 @@ const Home = () => (
       </a>
       <a href="#/embed-object-multi-app">
         <div className="card">
+          {/* <div className="card-disabled"> */}
           <div className="card-header ">Embed Objects from 2 Apps</div>
           <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
           <div className="card-footer ">Embed any object from 2 Qvfs with just the id</div>
@@ -26,46 +27,50 @@ const Home = () => (
           </div>
         </div>
       </a>
-      <a href="#/session-object">
-        <div className="card">
-          <div className="card-header ">Create Session Objects</div>
-          <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">Create a session Object with custom definition </div>
-          <div className="badges">
-            <span className="badge badge-dark">Capability API</span>
-          </div>
+      {/* <a href="#/session-object"> */}
+      {/* <div className="card"> */}
+      <div className="card-disabled">
+        <div className="card-header ">Create Session Objects</div>
+        <div className="card-body"><img className="card-img-top" src="assets/embedded.png" alt="Embedded Native Object" /></div>
+        <div className="card-footer ">Create a session Object with custom definition </div>
+        <div className="badges">
+          <span className="badge badge-dark">Capability API</span>
         </div>
-      </a>
-      <a href="#/current-selections">
-        <div className="card">
-          <div className="card-header ">Current Selections Toolbar</div>
-          <div className="card-body"><img className="card-img-top" src="assets/currentSelections.png" alt="Embedded Native Object" /></div>
-          <div className="card-footer ">The Native Qlik Sense Selection Toolbar </div>
-          <div className="badges">
-            <span className="badge badge-dark">Capability API</span>
-          </div>
+      </div>
+      {/* </a> */}
+      {/* <a href="#/current-selections"> */}
+      {/* <div className="card"> */}
+      <div className="card-disabled">
+        <div className="card-header ">Current Selections Toolbar</div>
+        <div className="card-body"><img className="card-img-top" src="assets/currentSelections.png" alt="Embedded Native Object" /></div>
+        <div className="card-footer ">The Native Qlik Sense Selection Toolbar </div>
+        <div className="badges">
+          <span className="badge badge-dark">Capability API</span>
         </div>
-      </a>
-      <a href="#/table">
-        <div className="card">
-          <div className="card-header ">Table</div>
-          <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
-          <div className="card-footer ">Create a table via the Capability API </div>
-          <div className="badges">
-            <span className="badge badge-dark">Capability API</span>
-          </div>
+      </div>
+      {/* </a> */}
+      {/* <a href="#/table"> */}
+      {/* <div className="card"> */}
+      <div className="card-disabled">
+        <div className="card-header ">Table</div>
+        <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
+        <div className="card-footer ">Create a table via the Capability API </div>
+        <div className="badges">
+          <span className="badge badge-dark">Capability API</span>
         </div>
-      </a>
-      <a href="#/table-engine">
-        <div className="card">
-          <div className="card-header ">Table</div>
-          <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
-          <div className="card-footer ">Create a table via the  Engine API</div>
-          <div className="badges">
-            <span className="badge badge-dark"> Engine API</span>
-          </div>
+      </div>
+      {/* </a> */}
+      {/* <a href="#/table-engine"> */}
+      {/* <div className="card"> */}
+      <div className="card-disabled">
+        <div className="card-header ">Table</div>
+        <div className="card-body"><img className="card-img-top" src="assets/table.png" alt="Table" /></div>
+        <div className="card-footer ">Create a table via the  Engine API</div>
+        <div className="badges">
+          <span className="badge badge-dark"> Engine API</span>
         </div>
-      </a>
+      </div>
+      {/* </a> */}
       <a href="#/selection-toolbar">
         <div className="card">
           <div className="card-header ">Custom Selections Toolbar</div>
@@ -76,16 +81,17 @@ const Home = () => (
           </div>
         </div>
       </a>
-      <a href="#/search">
-        <div className="card">
-          <div className="card-header ">Search</div>
-          <div className="card-body"><img className="card-img-top" src="assets/search.png" alt="Search Fields" /></div>
-          <div className="card-footer ">Search any Field or Dimension from your Qvf</div>
-          <div className="badges">
-            <span className="badge badge-dark">Engine API</span>
-          </div>
+      {/* <a href="#/search"> */}
+      {/* <div className="card"> */}
+      <div className="card-disabled">
+        <div className="card-header ">Search</div>
+        <div className="card-body"><img className="card-img-top" src="assets/search.png" alt="Search Fields" /></div>
+        <div className="card-footer ">Search any Field or Dimension from your Qvf</div>
+        <div className="badges">
+          <span className="badge badge-dark">Engine API</span>
         </div>
-      </a>
+      </div>
+      {/* </a> */}
       <a href="#/filters">
         <div className="card">
           <div className="card-header ">Filters</div>

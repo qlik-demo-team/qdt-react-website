@@ -22,8 +22,21 @@ const config2 = {
   identity,
 };
 
-const app1Promise = qdtEnigma(config1);
-const app2Promise = qdtEnigma(config2);
-const app3Promise = qdtCapabilityApp(config1);
+const config3 = {
+  host: 'sense-demo.qlik.com',
+  secure: true,
+  port: 443,
+  prefix: '',
+  appId: '372cbc85-f7fb-4db6-a620-9a5367845dce', // Consumer Sales
+  identity,
+};
 
-export { app1Promise, app2Promise, app3Promise };
+
+const engineApiApp1Promise = qdtEnigma(config1);
+const engineApiApp2Promise = qdtEnigma(config2);
+const capabilityApiApp1Promise = qdtCapabilityApp(config1);
+const capabilityApiApp2Promise = qdtCapabilityApp(config3);
+
+export {
+  engineApiApp1Promise, engineApiApp2Promise, capabilityApiApp1Promise, capabilityApiApp2Promise,
+};
